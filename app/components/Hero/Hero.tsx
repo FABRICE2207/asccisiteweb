@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroungImage from '../../assets/image_background.jpg'
+// import backgroungImage from '../../assets/image_background.jpg'
 import logoascci from '../../assets/logo_ascci.png'
 import Image from 'next/image'
 
