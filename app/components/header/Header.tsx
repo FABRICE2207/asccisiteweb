@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import React from 'react'
-import Hero from '../Hero/Hero';
 
 // Menu
 const menuNav = [
@@ -12,17 +11,22 @@ const menuNav = [
     link: '/'
   },
   {
-    id: 2,
+    id: 1,
+    name: 'Actu',
+    link: '/actu'
+  },
+  {
+    id: 3,
     name: 'Event',
     link: '/event'
   },
   {
-    id: 3,
+    id: 4,
     name: 'Bootik',
     link: '/Bootik'
   },
   {
-    id: 4,
+    id: 5,
     name: 'Identitez-vous',
     link: '/identitez-vous'
   }
@@ -32,11 +36,11 @@ const Header = () => {
   return (
     <div>
       <nav className='w-full flex bg-[#14148a] justify-between items-center gap-1 lg:px-16
-    px-6 py-4 sticky top-0 z-50'>
+    px-6 py-4 sticky top-0'>
       <div className='w-[80%]'>
 
         {/* Liste des onglets */}
-        <ul className='lg:flex justify-end items-end gap-20 hidden'>
+        <ul className='lg:flex justify-end items-end gap-18 hidden'>
           {
             menuNav.map(( {name, link} ) => (
               <Link key={link} className='text-white font-semibold cursor-pointer p-1
@@ -53,8 +57,7 @@ const Header = () => {
       </div>
       </nav>
 
-      {/* Image background */}
-      <Hero />
+      
     </div>
   )
 }
