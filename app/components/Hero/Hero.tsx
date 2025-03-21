@@ -68,9 +68,8 @@ const Hero = () => {
       <ul className='lg:flex lg:flex-col'>
       {
            menuBas.map(( {name, link} ) => (
-              <div className="flex items-center gap-1">
-                <Link className='text-white font-bold cursor-pointer p-1
-                ' href={link}
+              <div key={link} className="flex items-center gap-1">
+                <Link className='text-white font-bold cursor-pointer p-1' href={link}
                 >{name}</Link>
               </div>
             ))
