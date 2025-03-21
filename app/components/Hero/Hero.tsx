@@ -2,9 +2,6 @@ import React from 'react'
 import logoascci from '../../assets/logo_ascci.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect } from 'react';
-
-// Ani
 
 const Hero = () => {
 
@@ -72,7 +69,6 @@ const Hero = () => {
       {
            menuBas.map(( {name, link} ) => (
               <div className="flex items-center gap-1">
-                <Image key={link} src={logoascci} width={30} height={30} alt="Logo de l'ASCCI" />
                 <Link className='text-white font-bold cursor-pointer p-1
                 ' href={link}
                 >{name}</Link>
