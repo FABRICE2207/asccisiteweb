@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-:root {
+.bg-hero {
+  background-image: url('../app/assets/image_background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +29,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
