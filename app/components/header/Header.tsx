@@ -34,9 +34,8 @@ const menuNav = [
 
 const Header = () => {
   return (
-    <div>
       <nav className='w-full flex bg-[#14148a] justify-between items-center gap-1 lg:px-16
-    px-6 py-4 sticky top-0'>
+    px-6 py-4 sticky top-0 z-1'>
       <div className='w-[80%]'>
 
         {/* Liste des onglets */}
@@ -56,9 +55,6 @@ const Header = () => {
         </div>
       </div>
       </nav>
-
-      
-    </div>
   )
 }
 

@@ -31,13 +31,15 @@ const Hero = () => {
   return (
      // Image d'Arrière plan
      <div className='bg-black w-full lg:h-[600px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[50px]
-     px-[20px] lg:flex-row flex-col lg:gap-5 gap-[50px] bg-hero
+     px-[20px] lg:flex-row flex-col lg:gap-5 gap-[20px] bg-hero
    '
    >
     
-    <div className='w-full flex flex-col lg:justify-start lg:items-start lg:text-start lg:py-[50px] lg:gap-3 md:flex-row
-    sm:w-full sm:flex sm:justify-center sm:items-center sm:text-center sm:gap-[5px]'>
-      <div>
+    <div className='w-full flex flex-col lg:justify-start lg:items-start lg:text-start lg:py-[40px] lg:gap-3 md:flex-row
+    md:w-full md:flex md:justify-center md:items-center md:text-center md:gap-[5px]
+    sm:flex sm:justify-center sm:items-center sm:text-center sm:flex-col justify-center items-center
+    '>
+      <div className='flex justify-center items-center'>
       <Image
         src={logoascci}
         width={180}
@@ -55,7 +57,9 @@ const Hero = () => {
           {/* Bouton direction sur le site d'adhésion */}
           <Link href="https://adhesion.scoutascci.org/" target="_blank"
             className='bg-gradient-to-l from-orange-500 to-orange-700 w-[200px] h-[50px] rounded-2xl text-2xl flex justify-center 
-            items-center hover:bg-[#14148a] font-semibold sm:flex sm:justify-center sm:items-center sm:text-center'>
+            items-center font-semibold sm:flex sm:justify-center sm:items-center sm:text-center
+            md:flex md:justify-center md:items-center md:text-center
+            '>
             Inscrivez-vous
           </Link>
         </div>
