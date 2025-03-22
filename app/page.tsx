@@ -1,6 +1,6 @@
 "use client"
 import Hero from './components/Hero/Hero';
-import ChiffreCard from './components/ChiffreCard/ChiffreCard';
+import ChiffreCard from './components/chiffreCard/ChiffreCard';
 import Event from './components/Event/Event';
 
 
