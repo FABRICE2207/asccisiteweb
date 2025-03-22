@@ -3,6 +3,12 @@
 import React from 'react'
 import Image from 'next/image'
 import logoascci from '../../assets/logo_ascci.png'
+import scoutben from '../../assets/scoutbene.png'
+import fillegarcon from '../../assets/fillegarcon.png'
+import benevole from '../../assets/benevole.png'
+import region from '../../assets/region.png'
+import district from '../../assets/district.png'
+import groupe from '../../assets/groupe.png'
 
 const ChiffreCard = () => {
   return (
@@ -12,8 +18,8 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
-            width={180}
+            src={scoutben}
+            width={130}
             height={180}
             alt="Logo de l'ASCCI"
             
@@ -24,7 +30,7 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
+            src={fillegarcon}
             width={180}
             height={180}
             alt="Logo de l'ASCCI"
@@ -35,7 +41,7 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
+            src={benevole}
             width={180}
             height={180}
             alt="Logo de l'ASCCI"
@@ -53,7 +59,7 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
+            src={region}
             width={180}
             height={180}
             alt="Logo de l'ASCCI"
@@ -65,7 +71,7 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
+            src={district}
             width={180}
             height={180}
             alt="Logo de l'ASCCI"
@@ -76,8 +82,8 @@ const ChiffreCard = () => {
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
-            src={logoascci}
-            width={180}
+            src={groupe}
+            width={220}
             height={180}
             alt="Logo de l'ASCCI"
             
