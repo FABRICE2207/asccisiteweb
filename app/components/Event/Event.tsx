@@ -83,7 +83,7 @@ const Event = () => {
  
           </div>
     
-        </section>
+     </section>
   )
 }
 
