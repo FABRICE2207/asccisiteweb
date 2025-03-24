@@ -166,7 +166,7 @@ const Hero = () => {
           }
       </ul>
     </div>
-    
+
     </div>
   )
 }
