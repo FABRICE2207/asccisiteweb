@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import logoascci from '../../assets/logo_ascci.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,6 +26,13 @@ const Hero = () => {
       icon: '../../assetst/logo_ascci.png'
     },
   ]
+
+    // État pour gérer la visibilité des popups
+    const [visiblePopup, setVisiblePopup] = useState<number | null>(null);
+
+    const togglePopup = (id: number) => {
+      setVisiblePopup(visiblePopup === id ? null : id);
+    };
 
 
   return (
@@ -68,14 +75,93 @@ const Hero = () => {
     </div>
 
     {/* Les trois liens en bas */}
-    <div className='w-[16%] border-r-2 border-white  mt-[-50px] hidden lg:block'>
+    <div className='w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block'>
       <ul className='lg:flex lg:flex-col'>
       {
-           menuBas.map(( {name, link} ) => (
-              <div key={link} className="flex items-center gap-1">
-                <Link className='text-white font-bold cursor-pointer p-1' href={link}
-                >{name}</Link>
+           menuBas.map(( {id, name, link} ) => (
+              <div key={id} className="flex items-center gap-1">
+                <Link className='text-white font-bold cursor-pointer p-1' href=''
+                onClick={() => togglePopup(id)}
+                >
+                  {name}
+                </Link>
+
+
+
+                {/* Popup unique pour chaque lien */}
+                {visiblePopup === id && (
+                <div className='absolute bg-white text-black p-4 shadow-lg z-50 
+                w-[90%] mt-[30%]'>
+
+                  {/* l'id est égale 1 */}
+                  {
+                    id === 1 && (
+                      <div className='flex justify-evenly items-center mt-2'>
+                        <div>
+                          <h1 className='text-[#14148a] text-2xl font-black'>Scout ASCCI</h1>
+                        </div>
+                        <div className='text-[#14148a] text-2xl font-black'>Organisation ASCCI</div>
+                      </div>
+                    )
+                  }
+
+                   {/* l'id est égale 2 */}
+                  {
+                    id === 2 && (
+                      <div className='flex justify-evenly items-center mt-2'>
+                        <div>
+                          <h1 className='text-[#14148a] text-2xl font-black'>Jeunes</h1>
+                        </div>
+
+                        <div className=''>
+                          <h1 className='text-[#14148a] text-2xl font-black'>Adultes</h1>
+                        </div>
+
+                        <div>
+                          <h1 className='text-[#14148a] text-2xl font-black'>Programmes Internationnaux</h1>
+                        </div>
+                      </div>
+                    )
+                  }
+
+
+                   {/* l'id est égale 3 */}
+                  {
+                    id === 3 && (
+                      <div className='flex justify-center items-center mt-2'>
+
+                        <div>
+                          <h1 className='text-[#14148a] text-2xl font-black'>Touvez-nous ici ?</h1>
+
+                          <div className='flex flex-col justify-center items-center gap-2 text-[#14148a] text-semibold'>
+                            <Link href="">Région</Link>
+                            <Link href="">District</Link>
+                            <Link href="">Groupe</Link>
+                            <Link href="">Dans le monde</Link>
+                          </div>
+                        </div>
+
+                      </div>
+                    )
+                  }
+
+                  {/* <Link
+                    href={link}
+                    className='text-blue-500 hover:underline mt-2 block'
+                  >
+                    Aller à {name}
+                  </Link> */}
+                  <button
+                    onClick={() => togglePopup(id)}
+                    className='mt-2 bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded'
+                  >
+                    Fermer
+                  </button>
+                </div>
+              )}
+
               </div>
+
             ))
           }
       </ul>
