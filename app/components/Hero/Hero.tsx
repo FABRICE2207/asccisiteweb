@@ -78,9 +78,9 @@ const Hero = () => {
     <div className='w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block'>
       <ul className='lg:flex lg:flex-col'>
       {
-           menuBas.map(( {id, name, link} ) => (
+           menuBas.map(( {id, name} ) => (
               <div key={id} className="flex items-center gap-1">
-                <Link className='text-white font-bold cursor-pointer p-1' href=''
+                <Link className='text-white font-bold cursor-pointer p-1' href=""
                 onClick={() => togglePopup(id)}
                 >
                   {name}
