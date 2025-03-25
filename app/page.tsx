@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import Hero from './components/Hero/Hero';
 import ChiffreCard from './components/chiffreCard/ChiffreCard';
 import Event from './components/Event/Event';
@@ -8,7 +8,6 @@ import Agir from './components/Agir/Agir';
 import FooterBefore from './components/FooterBefore/FooterBefore';
 import AOS from "aos";
 import "aos/dist/aos.css"
-
 
 export default function Home() {
 
