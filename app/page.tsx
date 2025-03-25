@@ -4,6 +4,7 @@ import ChiffreCard from './components/chiffreCard/ChiffreCard';
 import Event from './components/Event/Event';
 import Actu from './components/Actu/Actu';
 import Agir from './components/Agir/Agir';
+import FooterBefore from './components/FooterBefore/FooterBefore';
 
 
 export default function Home() {
@@ -24,6 +25,9 @@ export default function Home() {
 
       {/* Agir */}
       <Agir />
+
+      {/* Footer avant */}
+      <FooterBefore />
 
       {/* Les pages : les routes */}
       <main>

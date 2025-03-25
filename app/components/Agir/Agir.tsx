@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Agir = () => {
   return (
-    <section className='p-20'>
+    <section className='p-20 '>
       {/* Texte AGIR */}
     <h1 className='text-5xl mb-5 font-bold text-orange-500 text-center'>AGIR</h1>
 

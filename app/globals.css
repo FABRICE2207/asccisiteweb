@@ -6,6 +6,12 @@
   background-position: center;
 }
 
+.bg-footer-avant{
+  background-image: url('../app/assets/footeravant.png');
+  background-size: cover;
+  background-position: center;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
