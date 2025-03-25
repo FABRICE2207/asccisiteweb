@@ -7,17 +7,17 @@ import Link from 'next/link'
 
 const Agir = () => {
   return (
-    <section className='p-20 '>
+    <section className='lg:p-20 md:p-8 sm:p-8'>
       {/* Texte AGIR */}
     <h1 className='text-5xl mb-5 font-bold text-orange-500 text-center'>AGIR</h1>
 
     <div className='flex lg:flex-row lg:px-15 md:w-full flex-col justify-between items-center 
       py-10 gap-5 bg-gray-200'>
 
-      <div className='flex flex-col w-full gap-10'>
+      <div className='flex flex-col w-full gap-10 agir'>
         <div className='lg:flex lg:flex-row lg:justify-between lg:items-start md:flex md:flex-col bg-white
         sm:flex sm:flex-col'>
-          <div className='bg-amber-500 w-full'>
+          <div className='w-full'>
             <Image
               src={imagefille}
               width={300}
