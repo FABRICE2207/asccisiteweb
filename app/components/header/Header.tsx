@@ -84,7 +84,7 @@ const Header = () => {
       {/* affiche du menu format telephone */}
       <div className={`${isMenuOpen ? 'flex' : 'hidden'} `}>
 
-        <div className="fixed top-[9%] left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
+        <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
           <ul className='flex flex-col justify-start items-start gap-2 w-[80%] h-screen bg-[#14148a]
       p-4 absolute right-0'>
           {
