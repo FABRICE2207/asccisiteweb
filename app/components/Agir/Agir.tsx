@@ -16,7 +16,7 @@ const Agir = () => {
 
       <div className='flex flex-col w-full gap-10 agir'>
         <div className='lg:flex lg:flex-row lg:justify-between lg:items-start md:flex md:flex-col bg-white
-        sm:flex sm:flex-col'>
+        sm:flex sm:flex-col' data-aos="fade-up" data-aos-delay="1000">
           <div className='w-full'>
             <Image
               src={imagefille}
@@ -44,7 +44,7 @@ const Agir = () => {
         </div>
 
         <div className='lg:flex lg:flex-row lg:justify-between lg:items-start md:flex md:flex-col bg-white
-        sm:flex sm:flex-col'>
+        sm:flex sm:flex-col' data-aos="fade-up" data-aos-delay="1100">
           <div className='bg-amber-500 w-full'>
             <Image
               src={imagefille}
@@ -72,7 +72,7 @@ const Agir = () => {
         </div>
 
         <div className='lg:flex lg:flex-row lg:justify-between lg:items-start md:flex md:flex-col bg-white
-        sm:flex sm:flex-col'>
+        sm:flex sm:flex-col' data-aos="fade-up" data-aos-delay="1200">
           <div className='bg-amber-500 w-full'>
             <Image
               src={imagefille}

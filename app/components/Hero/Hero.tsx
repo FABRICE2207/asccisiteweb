@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logoascci from '../../assets/logo_ascci.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -46,7 +46,7 @@ const Hero = () => {
     md:w-full md:flex md:justify-center md:items-center md:text-center md:gap-[5px]
     sm:flex sm:justify-center sm:items-center sm:text-center sm:flex-col justify-center items-center
     '>
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center items-center' data-aos="zoom-in-down" data-aos-delay="300">
       <Image
         src={logoascci}
         width={180}
@@ -58,9 +58,10 @@ const Hero = () => {
 
       {/* Texte principale */}
       <div className='text-white text-prin'>
-        <h1 className='text-6xl font-bold'>AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
+        <h1 className='text-6xl font-bold' data-aos="fade-up" data-aos-delay="600">AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
 
-        <div className='lg:justify-start my-5 lg:items-start lg:text-start sm:flex sm:justify-center sm:items-center sm:text-center'>
+        <div className='lg:justify-start my-5 lg:items-start lg:text-start sm:flex 
+        sm:justify-center sm:items-center sm:text-center' data-aos="fade-up" data-aos-delay="800">
           {/* Bouton direction sur le site d'adhésion */}
           <Link href="https://adhesion.scoutascci.org/" target="_blank"
             className='bg-gradient-to-l from-orange-500 to-orange-700 w-[200px] h-[50px] rounded-2xl text-2xl flex justify-center 
@@ -75,7 +76,7 @@ const Hero = () => {
     </div>
 
     {/* Les trois liens en bas */}
-    <div className='w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block'>
+    <div className='w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block' data-aos="fade-up" data-aos-delay="900">
       <ul className='lg:flex lg:flex-col'>
       {
            menuBas.map(( {id, name} ) => (

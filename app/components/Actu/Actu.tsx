@@ -11,7 +11,7 @@ const Actu = () => {
     <h1 className='text-5xl font-bold text-[#14148a] text-center'>Actu</h1>
 
     <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-      py-10 gap-5 p-8'>
+      py-10 gap-5 p-8' data-aos="fade-up" data-aos-delay="600">
 
       <div className='flex flex-col w-full
       '>
@@ -110,7 +110,7 @@ const Actu = () => {
 
     </div>
 
-    <div className='flex justify-center items-center mb-10'>
+    <div className='flex justify-center items-center mb-10' data-aos="fade-up" data-aos-delay="800">
       <Link href="" className='bg-[#14148a] px-5 py-1 text-white rounded-full'>Voir toutes l’actualité</Link>
     </div>
 
