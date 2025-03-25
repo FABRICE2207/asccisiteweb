@@ -19,6 +19,17 @@
 }
 
 
+@media (max-width: 640px) {
+  .text-prin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
 
       {/* Texte principale */}
-      <div className='text-white'>
+      <div className='text-white text-prin'>
         <h1 className='text-6xl font-bold'>AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
 
         <div className='lg:justify-start my-5 lg:items-start lg:text-start sm:flex sm:justify-center sm:items-center sm:text-center'>
