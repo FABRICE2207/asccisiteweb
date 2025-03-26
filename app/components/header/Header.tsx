@@ -39,7 +39,7 @@ const Header = () => {
     {
       id: 4,
       name: 'Bootik',
-      link: '/Bootik'
+      link: 'https://www.facebook.com/profile.php?id=100057136269345'
     },
     {
       id: 5,
@@ -48,12 +48,34 @@ const Header = () => {
     }
   ]
 
+  // Les trois lien en bas
+  const menuBas = [
+    {
+      id: 1,
+      name: 'Qui sommes-nous ?',
+      link: '/qui-sommes-nous',
+      icon: '../../assetst/logo_ascci.png'
+    },
+    {
+      id: 2,
+      name: 'Que faisons-nous ?',
+      link: '/que-faisons-nous',
+      icon: '../../assetst/logo_ascci.png'
+    },
+    {
+      id: 3,
+      name: 'Où nous touvez ?',
+      link: '/ou-nous-touvez',
+      icon: '../../assetst/logo_ascci.png'
+    },
+  ]
+
   return (
     <nav className='w-full flex bg-[#14148a] justify-between items-center gap-1 lg:px-16
       px-6 py-4 sticky top-0 z-1'>
       <div className='w-[80%]'>
 
-        {/* Liste des onglets */}
+        {/* Liste des menus header */}
         <ul className='lg:flex justify-end items-end gap-18 hidden'>
           {
             menuNav.map(( {name, link} ) => (
@@ -85,7 +107,7 @@ const Header = () => {
       <div className={`${isMenuOpen ? 'flex' : 'hidden'} `}>
 
         <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
-          <ul className='flex flex-col justify-start items-start gap-2 w-[80%] h-screen bg-[#14148a]
+          <ul className='flex flex-col justify-start items-start gap-2 w-[60%] h-screen bg-[#14148a]
       p-4 absolute right-0'>
           {
             menuNav.map(( {link, name} ) => (
@@ -94,6 +116,18 @@ const Header = () => {
               >{name}</Link>
             ))
           }
+
+          {/* Menu bas */}
+          {
+            menuBas.map(( {link, name} ) => (
+              <Link key={name} className='text-white uppercase font-semibold cursor-pointer p-2
+              w-full text-start' href={link}
+              >{name}</Link>
+            ))
+          }
+
+          
+
           </ul>
 
         </div>

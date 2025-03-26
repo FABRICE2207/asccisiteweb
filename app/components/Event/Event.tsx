@@ -13,7 +13,8 @@ const Event = () => {
             py-10 gap-5 p-8'>
     
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            ' data-aos="fade-up" data-aos-delay="800">
+            '>
+              {/* Animation :  data-aos="fade-up" data-aos-delay="700" */}
               <div className=''>
                 <Image
                   src={imagefille}
@@ -36,7 +37,7 @@ const Event = () => {
             </div>
 
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            ' data-aos="fade-up" data-aos-delay="1000">
+            '>
               <div className=''>
                 <Image
                   src={imagefille}
@@ -59,7 +60,7 @@ const Event = () => {
             </div>
             
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            ' data-aos="fade-up" data-aos-delay="1200">
+            '>
               <div className=''>
                 <Image
                   src={imagefille}

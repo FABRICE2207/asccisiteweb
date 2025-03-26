@@ -14,7 +14,7 @@ const ChiffreCard = () => {
   return (
     <section>
       <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-        py-10 gap-5' data-aos="fade-up" data-aos-delay="1000">
+        py-10 gap-5'>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
@@ -55,7 +55,7 @@ const ChiffreCard = () => {
 
       {/* Deuxième colonnes */}
       <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
-        py-10 gap-5' data-aos="fade-up" data-aos-delay="1200">
+        py-10 gap-5'>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
           <Image
