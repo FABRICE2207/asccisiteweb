@@ -46,7 +46,7 @@ const Hero = () => {
     md:w-full md:flex md:justify-center md:items-center md:text-center md:gap-[5px]
     sm:flex sm:justify-center sm:items-center sm:text-center sm:flex-col justify-center items-center
     '>
-      <div className='flex justify-center items-center' data-aos="zoom-in-down" data-aos-delay="300">
+      <div className='flex justify-center items-start' data-aos="zoom-in-down" data-aos-delay="300">
       <Image
         src={logoascci}
         width={180}
@@ -58,7 +58,7 @@ const Hero = () => {
 
       {/* Texte principale */}
       <div className='text-white text-prin'>
-        <h1 className='text-6xl font-bold' data-aos="fade-up" data-aos-delay="600">AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
+        <h1 className='text-6xl font-bold titre-prin' data-aos="fade-up" data-aos-delay="600">AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
 
         <div className='lg:justify-start my-5 lg:items-start lg:text-start sm:flex 
         sm:justify-center sm:items-center sm:text-center' data-aos="fade-up" data-aos-delay="800">
