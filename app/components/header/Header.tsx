@@ -115,9 +115,9 @@ const Header = () => {
       <div className="w-[80%]">
         {/* Liste des menus header */}
         <ul className="lg:flex justify-end items-end gap-18 hidden">
-          {menuNav.map(({ name, link }) => (
+          {menuNav.map(({ name, link, id }) => (
             <Link
-              key={link}
+              key={id}
               className="text-white font-semibold cursor-pointer p-1
                 hover:border-[#090674]  text-[15px]"
               href={link}
@@ -185,10 +185,10 @@ const Header = () => {
             </div>
 
             <div className="flex flex-col w-full mt-4 gap-5 mt-10px cursor-pointer">
-              {menuNav.map(({ link, name }) => (
+              {menuNav.map(({ link, name, id }) => (
                 <div className="mx-2 border-b border-white py-1.5 px-1">
                   <Link
-                  key={link}
+                  key={id}
                   className="text-white font-semibold cursor-pointer
                   w-full text-start"
                   href={link}
