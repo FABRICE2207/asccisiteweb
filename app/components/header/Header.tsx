@@ -146,9 +146,9 @@ const Header = () => {
 
         <div className="fixed top-14 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
           <FaXmark className='text-white ml-6 mt-[-13%] text-3xl cursor-pointer'/>
-          <ul className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          <ul className='flex top-[-50px] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
       p-4 absolute right-0'>
-          <div className='w-full py-4'>
+          <div className='w-full mt-[-10px]'>
             <h4 className='text-center text-white font-semibold'>Menu</h4>
           </div>
           <div className='mt-10 flex flex-col justify-start items-start gap-2'>
@@ -191,9 +191,10 @@ const Header = () => {
       <div className={`${isMenuOpenOne ? 'flex' : 'hidden'} `}>
 
         <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuOne}>
-          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+        <FaXmark className='text-white ml-6 mt-[-13%] text-3xl cursor-pointer'/>
+          <div className='flex top-[-50px] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
           p-4 absolute right-0'>
-          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+          <div className='flex w-full gap-5 mt-[-10px] cursor-pointer' onClick={toggleMenu}>
             <FaArrowLeft className='text-white' />
             <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
           </div>
@@ -221,9 +222,10 @@ const Header = () => {
       <div className={`${isMenuOpenTwo ? 'flex' : 'hidden'} `}>
 
         <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuTwo}>
-          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          <FaXmark className='text-white ml-6 mt-[-13%] text-3xl cursor-pointer'/>
+          <div className='flex top-[-50px] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
           p-4 absolute right-0'>
-          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+          <div className='flex w-full mt-[-10px] gap-5 cursor-pointer' onClick={toggleMenu}>
             <FaArrowLeft className='text-white' />
             <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
           </div>
@@ -254,9 +256,10 @@ const Header = () => {
       <div className={`${isMenuOpenThree ? 'flex' : 'hidden'} `}>
 
         <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuThree}>
-          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          <FaXmark className='text-white ml-6 mt-[-13%] text-3xl cursor-pointer'/>
+          <div className='flex top-[-50px] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
           p-4 absolute right-0'>
-          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+          <div className='flex w-full mt-[-10px] gap-5 cursor-pointer' onClick={toggleMenu}>
             <FaArrowLeft className='text-white' />
             <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
           </div>
