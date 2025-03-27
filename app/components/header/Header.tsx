@@ -1,13 +1,17 @@
 "use client";
 
+import { link } from 'fs';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { FaXmark } from 'react-icons/fa6';
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpenOne, setIsMenuOpenOne] = useState(false);
+  const [isMenuOpenTwo, setIsMenuOpenTwo] = useState(false);
+  const [isMenuOpenThree, setIsMenuOpenThree] = useState(false);
 
   // Clique sur la barre du menue pour ouvrier
   const toggleMenu = () => {
@@ -18,6 +22,39 @@ const Header = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   }
+
+
+  // Clique sur la barre du menu one pour ouvrier
+  const toggleMenuOne = () => {
+    setIsMenuOpenOne(!isMenuOpenOne);
+  }
+
+  // Pour fermer le menu one
+  const closeMenuOne = () => {
+    setIsMenuOpenOne(false);
+  }
+
+  // Clique sur la barre du menu two pour ouvrier
+  const toggleMenuTwo = () => {
+    setIsMenuOpenTwo(!isMenuOpenTwo);
+  }
+
+  // Pour fermer le menu two
+  const closeMenuTwo = () => {
+    setIsMenuOpenTwo(false);
+  }
+
+  // Clique sur la barre du menu three pour ouvrier
+  const toggleMenuThree = () => {
+    setIsMenuOpenThree(!isMenuOpenThree);
+  }
+
+  // Pour fermer le menu two
+  const closeMenuThree = () => {
+    setIsMenuOpenThree(false);
+  }
+
+
 
   // Menu
   const menuNav = [
@@ -64,8 +101,8 @@ const Header = () => {
     },
     {
       id: 3,
-      name: 'Où nous touvez ?',
-      link: '/ou-nous-touvez',
+      name: 'Où nous trouvez ?',
+      link: '/ou-nous-trouvez',
       icon: '../../assetst/logo_ascci.png'
     },
   ]
@@ -86,6 +123,8 @@ const Header = () => {
           }
       </ul>
       </div>
+      
+      {/* Recherche */}
       <div>
         <div className='bg-gray-200 px-10 rounded-full'>
           <h3>Recherche</h3>
@@ -97,7 +136,7 @@ const Header = () => {
         <div>
           {
             // Si le menu est ouvert, affiche Icon FaXmark sinon FarBars
-            isMenuOpen ? <FaXmark className='text-white text-3xl cursor-pointer'/>
+            isMenuOpen ? null
             : <FaBars className='text-white text-3xl cursor-pointer'/>
           }
         </div>
@@ -106,35 +145,137 @@ const Header = () => {
       {/* affiche du menu format telephone */}
       <div className={`${isMenuOpen ? 'flex' : 'hidden'} `}>
 
-        <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
-          <ul className='flex flex-col justify-start items-start gap-2 w-[60%] h-screen bg-[#14148a]
+        <div className="fixed top-14 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenu}>
+          <FaXmark className='text-white ml-6 mt-[-13%] text-3xl cursor-pointer'/>
+          <ul className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
       p-4 absolute right-0'>
+          <div className='w-full py-4'>
+            <h4 className='text-center text-white font-semibold'>Menu</h4>
+          </div>
+          <div className='mt-10 flex flex-col justify-start items-start gap-2'>
           {
             menuNav.map(( {link, name} ) => (
-              <Link key={name} className='text-white uppercase font-semibold cursor-pointer p-2
-              w-full text-start' href={link}
+              <Link key={name} className='text-white  font-semibold cursor-pointer p-2
+              w-full text-start top-10' href={link}
               >{name}</Link>
             ))
           }
+          </div>
 
           {/* Menu bas */}
-          {
-            menuBas.map(( {link, name} ) => (
-              <Link key={name} className='text-white uppercase font-semibold cursor-pointer p-2
-              w-full text-start' href={link}
-              >{name}</Link>
-            ))
-          }
-
-          
+          <div className='justify-start items-start 
+          text-white  font-semibold cursor-pointer p-2 w-full text-start'>
+            <div className='flex flex-col gap-5'>
+              <div className='flex justify-between' onClick={toggleMenuOne} >
+                <h4 >Qui sommes-nous ?</h4>
+                <FaArrowRight className='text-white mt-1' />
+              </div>
+              <div className='flex justify-between' onClick={toggleMenuTwo} >
+                <h4 >Que faisons-nous ?</h4>
+                <FaArrowRight className='text-white mt-1' />
+              </div>
+              <div className='flex justify-between' onClick={toggleMenuThree} >
+                <h4>Où nous trouvez ? </h4>
+                <FaArrowRight className='text-white mt-1' />
+              </div>
+              
+            </div>
+          </div>
 
           </ul>
 
         </div>
 
       </div>
-      
 
+      {/* affiche du menu one format telephone */}
+      <div className={`${isMenuOpenOne ? 'flex' : 'hidden'} `}>
+
+        <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuOne}>
+          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          p-4 absolute right-0'>
+          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+            <FaArrowLeft className='text-white' />
+            <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
+          </div>
+            <div className='justify-start items-start 
+            text-white  font-semibold cursor-pointer p-2 w-full text-start'>
+              <div className='flex flex-col gap-5 mt-10'>
+                <div className='flex justify-between'>
+                  <h4>Scout ASCCI</h4>
+                  <FaArrowRight className='text-white mt-1' />
+                </div>
+                <div className='flex justify-between'>
+                  <h4>Organisation ASCCI</h4>
+                  <FaArrowRight className='text-white mt-1' />
+                </div>
+              </div>
+            </div>        
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* affiche du menu Two format telephone */}
+      <div className={`${isMenuOpenTwo ? 'flex' : 'hidden'} `}>
+
+        <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuTwo}>
+          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          p-4 absolute right-0'>
+          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+            <FaArrowLeft className='text-white' />
+            <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
+          </div>
+
+          <div className='justify-start items-start 
+            text-white  font-semibold cursor-pointer p-2 w-full text-start'>
+              <div className='flex flex-col gap-5 mt-10'>
+                <div className='flex justify-between'>
+                  <h4>Jeunes</h4>
+                  <FaArrowRight className='text-white mt-1' />
+                </div>
+                <div className='flex justify-between'>
+                  <h4>Adultes</h4>
+                  <FaArrowRight className='text-white mt-1' />
+                </div>
+                <div className='flex justify-between'>
+                  <h4>Programmes Internationaux</h4>
+                  <FaArrowRight className='text-white mt-4' />
+                </div>
+              </div>
+          </div>  
+
+          </div>
+        </div>
+      </div>
+
+      {/* affiche du menu Three format telephone */}
+      <div className={`${isMenuOpenThree ? 'flex' : 'hidden'} `}>
+
+        <div className="fixed top-18.5 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30" onClick={closeMenuThree}>
+          <div className='flex top-[-10%] flex-col justify-start items-start gap-2 w-[70%] h-screen bg-[#14148a]
+          p-4 absolute right-0'>
+          <div className='flex w-full py-4 gap-5 cursor-pointer' onClick={toggleMenu}>
+            <FaArrowLeft className='text-white' />
+            <h4 className='text-white font-semibold mt-[-5px]'>Précédent</h4>
+          </div>
+          <div className='justify-start items-start 
+            text-white  font-semibold cursor-pointer p-2 w-full text-start'>
+              <div className='flex flex-col gap-5 mt-10'>
+                <h4>Région</h4>
+                <h4>District</h4>
+                <h4>Groupe</h4>
+                <h4>Dans le monde</h4>
+              </div>
+            </div>             
+          </div>
+
+        </div>
+
+      </div>
+    
     </nav>
   )
 }

@@ -21,8 +21,8 @@ const Hero = () => {
     },
     {
       id: 3,
-      name: 'Où nous touvez ?',
-      link: '/ou-nous-touvez',
+      name: 'Où nous trouvez ?',
+      link: '/ou-nous-trouvez',
       icon: '../../assetst/logo_ascci.png'
     },
   ]
@@ -96,7 +96,7 @@ const Hero = () => {
                 <div>
                   
                   <div className='fixed top-10 left-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30' onClick={() => togglePopup(id)}>
-                      <div className='bg-white py-10 mt-48'>
+                      <div className='scroll-auto bg-white py-10 mt-48'>
                       <div className='flex justify-evenly items-start'>
                         <div>
                           <h1 className='text-[#14148a] text-2xl font-black'>Scout ASCCI</h1>
@@ -124,13 +124,7 @@ const Hero = () => {
                   </div>
                       </div>
                   </div>
-
-                  {/* <button
-                    onClick={() => togglePopup(id)}
-                    className='mt-2 bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded'
-                  >
-                    Fermer
-                  </button> */}
+                  
                 </div>
                   )
                 }
@@ -194,7 +188,7 @@ const Hero = () => {
                       <div className='bg-white py-10 mt-48'>
                         <div className='flex justify-evenly items-start mt-2'>
                           <div>
-                            <h1 className='text-[#14148a] text-2xl font-black'>Touvez-nous ici ?</h1>
+                            <h1 className='text-[#14148a] text-2xl font-black'>Trouvez nous ici ?</h1>
 
                             <div className='flex flex-col justify-start items-start gap-2 text-[#14148a] text-semibold'>
                               <Link href="">Région</Link>
