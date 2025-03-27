@@ -188,7 +188,7 @@ const Header = () => {
               {menuNav.map(({ link, name }) => (
                 <div className="mx-2 border-b border-white py-1.5 px-1">
                   <Link
-                  key={name}
+                  key={link}
                   className="text-white font-semibold cursor-pointer
                   w-full text-start"
                   href={link}
