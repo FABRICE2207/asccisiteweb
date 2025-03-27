@@ -85,26 +85,26 @@ const Header = () => {
   ]
 
   // Les trois lien en bas
-  const menuBas = [
-    {
-      id: 1,
-      name: 'Qui sommes-nous ?',
-      link: '/qui-sommes-nous',
-      icon: '../../assetst/logo_ascci.png'
-    },
-    {
-      id: 2,
-      name: 'Que faisons-nous ?',
-      link: '/que-faisons-nous',
-      icon: '../../assetst/logo_ascci.png'
-    },
-    {
-      id: 3,
-      name: 'Où nous trouvez ?',
-      link: '/ou-nous-trouvez',
-      icon: '../../assetst/logo_ascci.png'
-    },
-  ]
+  // const menuBas = [
+  //   {
+  //     id: 1,
+  //     name: 'Qui sommes-nous ?',
+  //     link: '/qui-sommes-nous',
+  //     icon: '../../assetst/logo_ascci.png'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Que faisons-nous ?',
+  //     link: '/que-faisons-nous',
+  //     icon: '../../assetst/logo_ascci.png'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Où nous trouvez ?',
+  //     link: '/ou-nous-trouvez',
+  //     icon: '../../assetst/logo_ascci.png'
+  //   },
+  // ]
 
   return (
     <nav className='w-full flex bg-[#14148a] justify-between items-center gap-1 lg:px-16
