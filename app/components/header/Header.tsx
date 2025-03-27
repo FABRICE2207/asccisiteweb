@@ -1,6 +1,5 @@
 "use client";
 
-import { link } from 'fs';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars, FaArrowLeft, FaArrowRight } from "react-icons/fa";
