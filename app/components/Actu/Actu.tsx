@@ -111,7 +111,7 @@ const Actu = () => {
     </div>
 
     <div className='flex justify-center items-center mb-10'>
-      <Link href="" className='bg-[#14148a] px-5 py-1 text-white rounded-full'>Voir toutes l’actualité</Link>
+      <Link href="/Actualite" className='bg-[#14148a] px-5 py-1 text-white rounded-full'>Voir toutes l’actualité</Link>
     </div>
 
 </section>

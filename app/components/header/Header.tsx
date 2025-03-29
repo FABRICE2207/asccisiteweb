@@ -66,12 +66,12 @@ const Header = () => {
     {
       id: 1,
       name: "Actu",
-      link: "/actu",
+      link: "/Actualite",
     },
     {
       id: 3,
       name: "Event",
-      link: "/event",
+      link: "/Evenements",
     },
     {
       id: 4,
@@ -115,9 +115,9 @@ const Header = () => {
       <div className="w-[80%]">
         {/* Liste des menus header */}
         <ul className="lg:flex justify-end items-end gap-18 hidden">
-          {menuNav.map(({ name, link, id }) => (
+          {menuNav.map(({ name, link}) => (
             <Link
-              key={id}
+              key={link}
               className="text-white font-semibold cursor-pointer p-1
                 hover:border-[#090674]  text-[15px]"
               href={link}
@@ -151,14 +151,13 @@ const Header = () => {
       </div>
 
       {/* affiche du menu format telephone */}
-      <div className={`${isMenuOpen ? "flex" : "hidden"} `}>
+      <div className={`${isMenuOpen ? "flex" : "hidden"}`}>
         <div
           className="fixed top-14 right-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30"
-          
         >
           <ul
             className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#14148a]
-              py-4 absolute left-0"
+              py-4 absolute left-0 "
           >
             {/* Logo  */}
             <div className="w-full">
@@ -185,16 +184,16 @@ const Header = () => {
             </div>
 
             <div className="flex flex-col w-full mt-4 gap-5 mt-10px cursor-pointer">
-              {menuNav.map(({ link, name, id }) => (
-                <div  key={id} className="mx-2 border-b border-white py-1.5 px-1">
-                  <Link
+              {menuNav.map(({ link, name }) => (
+                <Link
                   className="text-white font-semibold cursor-pointer
                   w-full text-start"
                   href={link}
                   >
+                  <div  key={link} className="mx-2 border-b border-white py-1.5 px-1" onClick={closeMenu}>
                     {name}
+                  </div>
                   </Link>
-                </div>
               ))}
             </div>
 
