@@ -185,12 +185,12 @@ const Header = () => {
 
             <div className="flex flex-col w-full mt-4 gap-5 mt-10px cursor-pointer">
               {menuNav.map(({ link, name }) => (
-                <Link
+                <Link key={link}
                   className="text-white font-semibold cursor-pointer
                   w-full text-start"
                   href={link}
                   >
-                  <div  key={link} className="mx-2 border-b border-white py-1.5 px-1" onClick={closeMenu}>
+                  <div className="mx-2 border-b border-white py-1.5 px-1" onClick={closeMenu}>
                     {name}
                   </div>
                   </Link>
