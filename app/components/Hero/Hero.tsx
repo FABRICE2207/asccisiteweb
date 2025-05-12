@@ -58,7 +58,14 @@ const Hero = () => {
 
       {/* Texte principale */}
       <div className='text-white text-prin'>
-        <h1 className='text-6xl font-bold titre-prin' data-aos="fade-up" data-aos-delay="600">AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE</h1>
+        <h1 
+          className='text-6xl titre-prin' 
+          data-aos="fade-up" 
+          data-aos-delay="600"
+          style={{ fontFamily: 'ChunkFiveEx' }}
+          >
+            AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE  <br /> ET RÉSILIENTE
+        </h1>
 
         <div className='lg:justify-start my-5 lg:items-start lg:text-start sm:flex 
         sm:justify-center sm:items-center sm:text-center' data-aos="fade-up" data-aos-delay="800">
@@ -67,7 +74,7 @@ const Hero = () => {
             className='bg-gradient-to-l from-orange-500 to-orange-700 w-[200px] h-[50px] rounded-2xl text-2xl flex justify-center 
             items-center font-semibold sm:flex sm:justify-center sm:items-center sm:text-center
             md:flex md:justify-center md:items-center md:text-center
-            '>
+            ' style={{ fontFamily: 'MontserratRegular' }}>
             Inscrivez-vous
           </Link>
         </div>
@@ -81,8 +88,9 @@ const Hero = () => {
       {
            menuBas.map(( {id, name} ) => (
               <div key={id} className="flex items-center gap-1">
-                <Link className='text-white font-bold cursor-pointer p-1 hover:border-orange-600
+                <Link className='text-white cursor-pointer p-1 hover:border-orange-600
                 hover:border-b-4 focus:border-orange-600 focus:border-b-4' 
+                style={{ fontFamily: 'MontserratRegular' }}
                 href=""
                 onClick={() => togglePopup(id)}
                 >
@@ -99,7 +107,7 @@ const Hero = () => {
                       <div className='scroll-auto bg-white py-10 mt-48'>
                       <div className='flex justify-evenly items-start'>
                         <div>
-                          <h1 className='text-[#14148a] text-2xl font-black'>Scout ASCCI</h1>
+                          <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Scout ASCCI</h1>
                           <div className='flex flex-col justify-start items-start mt-5 gap-2 text-[#14148a] text-semibold'>
                             <Link href="">Le Mouvement Scout</Link>
                             <Link href="">Projet pédagogique</Link>
@@ -111,7 +119,7 @@ const Hero = () => {
                         </div>
 
                         <div>
-                          <h1 className='text-[#14148a] text-2xl font-black'>Organisation ASCCI</h1>
+                          <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Organisation ASCCI</h1>
                           <div className='flex flex-col justify-start items-start mt-5 gap-2 text-[#14148a] text-semibold'>
                             <Link href="">Organigramme</Link>
                             <Link href="">Equipe nationale</Link>
@@ -139,7 +147,7 @@ const Hero = () => {
                       <div className='flex justify-evenly items-start mt-2'>
                         <div>
                           <div>
-                            <h1 className='text-[#14148a] text-2xl font-black'>Jeunes</h1>
+                            <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Jeunes</h1>
                           </div>
                           <div className='flex flex-col justify-start items-start mt-5 gap-2 text-[#14148a] text-semibold'>
                             <Link href="">Environnement</Link>
@@ -153,7 +161,7 @@ const Hero = () => {
 
                         <div>
                           <div>
-                            <h1 className='text-[#14148a] text-2xl font-black'>Adultes</h1>
+                            <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Adultes</h1>
                           </div>
                           <div className='flex flex-col justify-start items-start mt-5 gap-2 text-[#14148a] text-semibold'>
 
@@ -165,7 +173,7 @@ const Hero = () => {
                         </div>
 
                         <div>
-                          <h1 className='text-[#14148a] text-2xl font-black'>Programmes Internationaux</h1>
+                          <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Programmes Internationaux</h1>
                           <div className='flex flex-col justify-start items-start mt-5 gap-2 text-[#14148a] text-semibold'>
                             <Link href="">Projet planete</Link>
                             <Link href="">Messager de la paix</Link>
@@ -188,7 +196,7 @@ const Hero = () => {
                       <div className='bg-white py-10 mt-48'>
                         <div className='flex justify-evenly items-start mt-2'>
                           <div>
-                            <h1 className='text-[#14148a] text-2xl font-black'>Trouvez nous ici ?</h1>
+                            <h1 className='text-[#14148a] text-2xl' style={{ fontFamily: 'ChunkFiveEx' }}>Trouvez nous ici ?</h1>
 
                             <div className='flex flex-col justify-start items-start gap-2 text-[#14148a] text-semibold'>
                               <Link href="">Région</Link>

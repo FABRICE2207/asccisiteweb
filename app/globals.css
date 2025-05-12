@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Les couleures */
+:root {
+  --colorBleu: #000080;
+  --colorVert: #02B70E;
+  --colorOrange: #E64E1B;
+  --colorOrangeCiel: #F08F00;
+}
+
 .bg-hero {
   background-image: url('../app/assets/image_background.jpg');
   background-size: cover;
@@ -18,7 +26,6 @@
   }
 }
 
-
 @media (max-width: 640px) {
   .text-prin{
     display: flex;
@@ -33,6 +40,28 @@
   }
 }
 
+/* les polices importés */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600; /* Semi-Bold */
+  font-style: normal;
+  font-display: swap; /* Améliore les performances */
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap; /* Améliore les performances */
+}
+
+@font-face {
+  font-family: 'ChunkFiveEx';
+  src: url('/fonts/ChunkFiveEx.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap; /* Améliore les performances */
+}
 
 /* :root {
   --background: #ffffff;
@@ -52,6 +81,8 @@
     --foreground: #ededed;
   }
 }
+
+
 
 body {
   background: var(--background);

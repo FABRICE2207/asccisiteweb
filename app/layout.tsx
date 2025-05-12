@@ -7,7 +7,18 @@ import Footer from "./components/footer/Footer";
 export const metadata: Metadata = {
   title: "ASCCI - Association des Scouts Catholique de Côte d'Ivoire",
   description: "ASSCI est l'Association des Scouts Catholique de Côte d'Ivoire qui régroupe plus 30.000 scouts dans notre association.",
-  keywords: ["scoutisme ivoirien", "ASSCI", "Scout en Côte d'Ivoire", "association des scouts catholique de côte d'ivoire"],
+  icons: {
+    icon: "/logo_ascci.png", // public/images_logo --- Chemin vers votre favicon
+    shortcut: "/logo_ascci.png", // Optionnel : pour les raccourcis
+    apple: "/logo_ascci.png", // Optionnel : pour les appareils Apple
+  },
+  keywords: [
+    "scoutisme ivoirien", 
+    "ASSCI", 
+    "Scout en Côte d'Ivoire", 
+    "association des scouts catholique de côte d'ivoire",
+    "scouts catholique"
+  ],
   authors: [{name:"ASCCI", }],
   // viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
@@ -36,7 +47,7 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html lang="en">
+    <html lang="fr">
       <body>
         {/* Le header */}
         <Header />

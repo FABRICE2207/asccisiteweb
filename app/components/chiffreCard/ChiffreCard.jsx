@@ -25,7 +25,7 @@ const ChiffreCard = () => {
             
           />
           <h1 className='text-6xl font-black text-red-600'>+30 000</h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Scouts et bénévoles</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }}>Scouts et bénévoles</h3>
         </div>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
@@ -36,7 +36,7 @@ const ChiffreCard = () => {
             alt="Logo de l'ASCCI"
           />
           <h1 className='text-6xl font-black text-red-600'>25 000</h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Jeunes Filles et Garçons</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }} >Jeunes Filles et Garçons</h3>
         </div>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
@@ -48,7 +48,7 @@ const ChiffreCard = () => {
             
           />
           <h1 className='text-6xl font-black text-red-600'>5000</h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Bénévoles</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }} >Bénévoles</h3>
         </div>
         
       </div>
@@ -66,7 +66,7 @@ const ChiffreCard = () => {
             
           />
           <h1 className='text-6xl font-black text-red-600'>14</h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Région Scoutes</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }} >Région Scoutes</h3>
         </div>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
@@ -77,7 +77,7 @@ const ChiffreCard = () => {
             alt="Logo de l'ASCCI"
           />
           <h1 className='text-6xl font-black text-red-600'>145 </h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Districts</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }} >Districts</h3>
         </div>
 
         <div className='flex flex-col justify-center items-center mt-12 w-full'>
@@ -89,7 +89,7 @@ const ChiffreCard = () => {
             
           />
           <h1 className='text-6xl font-black text-red-600'>2300</h1>
-          <h3 className='text-[22px] font-black text-[#14148a]'>Groupes Scouts</h3>
+          <h3 className='text-[22px] text-[#14148a]' style={{ fontFamily: 'Montserrat', fontWeight: 600 }} >Groupes Scouts</h3>
         </div>
         
       </div>

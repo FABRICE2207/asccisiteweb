@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Event = () => {
   return (
      <section>
-          <h1 className='text-5xl font-bold text-[#1bb606] text-center'>Event</h1>
+          <h1 className='text-5xl text-[#1bb606] text-center' style={{ fontFamily: 'ChunkFiveEx' }} >Event</h1>
 
           <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
             py-10 gap-5 p-8'>
@@ -26,8 +26,8 @@ const Event = () => {
               </div>
               <div>
                 <div className='p-8 text-white'>
-                  <h1 className='font-black text-center'>CAMP DE REGION</h1>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
+                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>
@@ -49,8 +49,8 @@ const Event = () => {
               </div>
               <div>
                 <div className='p-8 text-white'>
-                  <h1 className='font-black text-center'>CAMP DE REGION</h1>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
+                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>
@@ -72,8 +72,8 @@ const Event = () => {
               </div>
               <div>
                 <div className='p-8 text-white'>
-                  <h1 className='font-black text-center'>CAMP DE REGION</h1>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
+                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>

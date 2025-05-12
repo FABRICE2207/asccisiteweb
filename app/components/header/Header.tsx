@@ -7,6 +7,8 @@ import { FaXmark } from "react-icons/fa6";
 import logoascci from "../../assets/logo_ascci.png";
 import Image from "next/image";
 
+
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpenOne, setIsMenuOpenOne] = useState(false);
@@ -109,7 +111,7 @@ const Header = () => {
 
   return (
     <nav
-      className="w-full flex bg-[#14148a] justify-between items-center gap-1 lg:px-16
+      className="w-full flex bg-[#000080] justify-between items-center gap-1 lg:px-16
       px-6 py-4 sticky top-0 z-1"
     >
       <div className="w-[80%]">
@@ -118,8 +120,10 @@ const Header = () => {
           {menuNav.map(({ name, link}) => (
             <Link
               key={link}
-              className="text-white font-semibold cursor-pointer p-1
-                hover:border-[#090674]  text-[15px]"
+              className="text-white cursor-pointer p-1 
+                hover:border-[#090674] text-[15px]"
+                style={{ fontFamily: 'Montserrat', fontWeight: 600 }}
+              // className=""
               href={link}
             >
               {name}
