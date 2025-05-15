@@ -18,7 +18,7 @@ const CONTENT_COMPONENTS = {
 
 
 const CardOrganisationAscci = () => {
-  const [activeHash, setActiveHash] = useState<string | null>(null);
+  
 
   //   useEffect(() => {
   //   if (initialActiveLink) {
@@ -33,7 +33,6 @@ const CardOrganisationAscci = () => {
       if (typeof window !== "undefined") {
         const hash = window.location.hash.substring(1); // Retire le #
         setActiveComponent(hash as keyof typeof CONTENT_COMPONENTS);
-        setActiveHash(hash);
         window.history.pushState(null, "", `#${hash}`);
       }
     };
@@ -64,7 +63,6 @@ const CardOrganisationAscci = () => {
     console.log(id);
 
     setActiveComponent(id);
-    setActiveHash(id);
     window.history.pushState(null, "", `#${id}`);
   };
 
