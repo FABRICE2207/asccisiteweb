@@ -14,6 +14,10 @@ const Header = () => {
   const [isMenuOpenOne, setIsMenuOpenOne] = useState(false);
   const [isMenuOpenTwo, setIsMenuOpenTwo] = useState(false);
   const [isMenuOpenThree, setIsMenuOpenThree] = useState(false);
+  const [isMenuOpenScoutAscci, setIsMenuOpenScoutAscci] = useState(false);
+
+
+  const [activeHash, setActiveHash] = useState<string | null>(null);
 
   // Clique sur la barre du menue pour ouvrier
   const toggleMenu = () => {
@@ -26,6 +30,7 @@ const Header = () => {
     setIsMenuOpenOne(false);
     setIsMenuOpenTwo(false);
     setIsMenuOpenThree(false);
+    setIsMenuOpenScoutAscci(false);
   };
 
   // Clique sur la barre du menu one pour ouvrier
@@ -58,6 +63,17 @@ const Header = () => {
     setIsMenuOpenThree(false);
   };
 
+
+  // Clique sur la barre du menu three pour ouvrier
+  const toggleMenuScoutAsci = () => {
+    setIsMenuOpenScoutAscci(!isMenuOpenScoutAscci);
+  };
+
+  // Pour fermer le menu two
+  const closeMenuScoutAsci = () => {
+    setIsMenuOpenScoutAscci(false);
+  };
+
   // Menu
   const menuNav = [
     {
@@ -87,27 +103,6 @@ const Header = () => {
     },
   ];
 
-  // Les trois lien en bas
-  // const menuBas = [
-  //   {
-  //     id: 1,
-  //     name: 'Qui sommes-nous ?',
-  //     link: '/qui-sommes-nous',
-  //     icon: '../../assetst/logo_ascci.png'
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Que faisons-nous ?',
-  //     link: '/que-faisons-nous',
-  //     icon: '../../assetst/logo_ascci.png'
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Où nous trouvez ?',
-  //     link: '/ou-nous-trouvez',
-  //     icon: '../../assetst/logo_ascci.png'
-  //   },
-  // ]
 
   return (
     <nav
@@ -137,7 +132,7 @@ const Header = () => {
         className="w-full ml-[-90px] flex justify-start items-start lg:hidden mt-3"
         onClick={toggleMenu}
       >
-        <div className="items-start">
+        <div className="items-start w-full">
           {
             // Si le menu est ouvert, affiche Icon FaXmark sinon FarBars
             isMenuOpen ? null : (
@@ -160,7 +155,7 @@ const Header = () => {
           className="fixed top-14 right-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30"
         >
           <ul
-            className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#14148a]
+            className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#000080]
               py-4 absolute left-0 "
           >
             {/* Logo  */}
@@ -232,7 +227,7 @@ const Header = () => {
             
           >
             <ul
-              className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#14148a]
+              className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#000080]
                 py-4 absolute left-0"
             >
               {/* Logo  */}
@@ -272,7 +267,7 @@ const Header = () => {
             text-white  font-semibold cursor-pointer w-full text-start"
               >
                 <div className="flex flex-col gap-5 mx-2">
-                  <div className="flex justify-between py-2 border-b border-white" onClick={toggleMenuOne}>
+                  <div className="flex justify-between py-2 border-b border-white" onClick={toggleMenuScoutAsci}>
                     <h4>Scout ASCCI</h4>
                     <FaArrowRight className="text-white mt-1" />
                   </div>
@@ -295,7 +290,7 @@ const Header = () => {
               
             >
               <ul
-                className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#14148a]
+                className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#000080]
                   py-4 absolute left-0"
               >
                 {/* Logo  */}
@@ -361,7 +356,7 @@ const Header = () => {
               
             >
               <ul
-                className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#14148a]
+                className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#000080]
                   py-4 absolute left-0"
               >
                 {/* Logo  */}
@@ -423,6 +418,101 @@ const Header = () => {
               </ul>
         </div>
       </div>
+
+      {/* affiche du menu Scout Ascci format telephone */}
+      <div className={`${isMenuOpenScoutAscci ? "flex" : "hidden"} `}>
+      <div
+              className="fixed top-14 right-0 w-screen h-screen bg-[#0e0d0d88] bg-opacity-30"
+              
+            >
+              <ul
+                className="flex top-[-50px] flex-col justify-start items-start gap-2 w-full h-screen bg-[#000080]
+                  py-4 absolute left-0"
+              >
+                {/* Logo  */}
+                <div className="w-full">
+                  <div className="flex justify-center items-center">
+                  <Image
+                    src={logoascci}
+                    width={80}
+                    height={80}
+                    alt="Logo de l'ASCCI"
+                  />
+                  </div>
+                </div>
+                
+                <div
+                  className="justify-start items-start 
+                text-white font-semibold cursor-pointer w-full text-start"
+                >
+                  <div className="flex flex-col gap-5 mx-2"  onClick={closeMenu}>
+                    <div className="flex justify-between py-2 border-b border-white" >
+                      <h4>Fermer</h4>
+                      <FaXmark size={20} className="text-white mt-1" />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-5 mx-2 mt-2" onClick={closeMenuScoutAsci}>
+                    <div className="flex justify-between py-2 border-b border-white" >
+                      <h4>Précédent</h4>
+                      <FaArrowLeft size={20} className="text-white mt-" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Menu bas */}
+                <div
+                  className="justify-start items-start 
+              text-white  font-semibold cursor-pointer w-full text-start"
+                >
+                  <div className="flex flex-col gap-5 mx-2">
+                    <a
+                    onClick={closeMenu}
+                    href="/Scout-Ascci#Le-Mouvement-Scout" 
+                    className="flex justify-between py-2 border-b border-white">
+                      <h4>Le Mouvement Scout</h4>
+    
+                    </a>
+                    <a 
+                      onClick={closeMenu}
+                      href="/Scout-Ascci#Projet-pedagogique"
+                      className="flex justify-between py-2 border-b border-white"
+                    >
+                      <h4>Projet pédagogique</h4>
+                    </a>
+                    <a 
+                      onClick={closeMenu}
+                      href="/Scout-Ascci#Methode-scoute"
+                      className="flex justify-between py-2 border-b border-white">
+                      <h4>Méthode scoute</h4>
+                    </a>
+                    <a 
+                      onClick={closeMenu}
+                      href="/Scout-Ascci#Promesse-et-loi-scoutes"
+                       className="flex justify-between py-2 border-b border-white">
+                      <h4>Promesse et loi scoutes</h4>
+                    </a>
+                    <a 
+                      onClick={closeMenu}
+                      href="/Scout-Ascci#Histoire-du-scoutisme" 
+                      className="flex justify-between py-2 border-b border-white">
+                      <h4>Histoire du scoutisme</h4>
+    
+                    </a>
+                    <a 
+                      onClick={closeMenu}
+                      href="/Scout-Ascci#Formation"
+                      className="flex justify-between py-2 border-b border-white">
+                      <h4>Formation</h4>
+                    </a>
+
+                  </div>
+                </div>
+              </ul>
+        </div>
+      </div>
+
+
     </nav>
   );
 };
