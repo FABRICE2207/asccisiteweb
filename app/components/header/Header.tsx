@@ -17,8 +17,6 @@ const Header = () => {
   const [isMenuOpenScoutAscci, setIsMenuOpenScoutAscci] = useState(false);
 
 
-  const [activeHash, setActiveHash] = useState<string | null>(null);
-
   // Clique sur la barre du menue pour ouvrier
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

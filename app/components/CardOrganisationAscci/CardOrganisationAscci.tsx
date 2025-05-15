@@ -16,17 +16,8 @@ const CONTENT_COMPONENTS = {
   "Jeunes-conseillers": JeunesConseillers,
 };
 
-interface CardOrganisationAscciProps {
-  initialActiveLink?: string;
-}
 
-const CardOrganisationAscci: React.FC<CardOrganisationAscciProps> = ({
-  initialActiveLink = null,
-}) => {
-  const [activeLink, setActiveLink] = useState<string | null>(
-    initialActiveLink
-  );
-  const [activeContent, setActiveContent] = useState<string>("");
+const CardOrganisationAscci = () => {
   const [activeHash, setActiveHash] = useState<string | null>(null);
 
   //   useEffect(() => {

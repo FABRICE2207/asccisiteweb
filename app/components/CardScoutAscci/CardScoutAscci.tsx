@@ -16,17 +16,8 @@ const CONTENT_COMPONENTS = {
   Formation: Formation,
 };
 
-interface CardScoutAscciProps {
-  initialActiveLink?: string;
-}
-
-const CardScoutAscci: React.FC<CardScoutAscciProps> = ({
-  initialActiveLink = null,
-}) => {
-  const [activeLink, setActiveLink] = useState<string | null>(
-    initialActiveLink
-  );
-  const [activeContent, setActiveContent] = useState<string>("");
+const CardScoutAscci =() => {
+  
   const [activeHash, setActiveHash] = useState<string | null>(null);
 
   //   useEffect(() => {
