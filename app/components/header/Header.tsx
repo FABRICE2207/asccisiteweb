@@ -127,18 +127,17 @@ const Header = () => {
 
       {/* Icône pour ouvrir/fermer le menu en mode téléphone */}
       <div
-        className="w-full ml-[-90px] flex justify-start items-start lg:hidden mt-3"
+  className="w-full flex justify-end items-start lg:hidden mt-3"
+
+>
+  <div className="items-end w-full">
+    {!isMenuOpen && (
+      <FaBars className="text-white text-3xl cursor-pointer ml-[-80%]" 
         onClick={toggleMenu}
-      >
-        <div className="items-start w-full">
-          {
-            // Si le menu est ouvert, affiche Icon FaXmark sinon FarBars
-            isMenuOpen ? null : (
-              <FaBars className="text-white text-3xl cursor-pointer" />
-            )
-          }
-        </div>
-      </div>
+      />
+    )}
+  </div>
+</div>
 
       {/* Recherche */}
       <div>

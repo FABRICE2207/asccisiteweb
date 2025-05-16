@@ -1000,15 +1000,15 @@ const isOrganisation = () =>
                   >
                     <div className="bg-white py-10 mt-48">
                       <div className="flex justify-evenly items-start mt-2">
-                        <div>
+                        <div className="text-[#000080]">
                           <h1
-                            className="text-[[#000080]] text-2xl"
+                            className="text-2xl"
                             style={{ fontFamily: "ChunkFiveEx" }}
                           >
-                            Trouvez nous ici ?
+                            Trouvez nous ici
                           </h1>
 
-                          <div className="flex flex-col justify-start items-start gap-2 text-[[#000080]] text-semibold">
+                          <div className="flex flex-col justify-start items-start gap-2 text-semibold">
                             <Link href="">Région</Link>
                             <Link href="">District</Link>
                             <Link href="">Groupe</Link>
