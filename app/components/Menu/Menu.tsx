@@ -971,7 +971,18 @@ const isOrganisation = () =>
                                 setActiveHash("Projet-planète");
                               }}
                             >Projet planète</Link>
-                            <Link href="">Messager de la paix</Link>
+                            <Link href=""
+                               className={`${
+                                activeHash === "Message-de-la-paix" || isProjetPlanete()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Programmes-Internationaux#Message-de-la-paix";
+                                setActiveHash("Message-de-la-paix");
+                              }}
+                            >Messager de la paix</Link>
                           </div>
                         </div>
                       </div>
