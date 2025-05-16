@@ -444,6 +444,74 @@ const isOrganisation = () =>
       }
     });
   }, []);
+  
+  /*Fin Adules*/ 
+
+    /*Début Programmes*/ 
+    /* Les fonction pour du Jeunes */ 
+  const isProjetPlanete = () =>
+    checkCurrentSectionProgrammes({
+      path: "/Projet-planète",
+      hash: "#ProjetPlanete",
+    });
+  const isMessagePaix = () =>
+    checkCurrentSectionProgrammes({
+      path: "/Message-de-la-paix",
+      hash: "#Message-de-la-paix",
+    });
+/*Fin fonction*/
+
+  // pour afficher le lien et le focus à chaque clique du bloc Jeunes
+  const checkCurrentSectionProgrammes = (section: {
+    path: string;
+    hash: string;
+    debug?: boolean;
+  }) => {
+    if (typeof window === "undefined") return false;
+
+    if (section.debug) {
+      console.log("checking section:", section.path + section.hash);
+      console.log("current:", window.location.pathname + window.location.hash);
+    }
+
+    return (
+      window.location.pathname === section.path &&
+      window.location.hash === section.hash
+    );
+  };
+
+      const sectionsProgrammes = [
+    {
+      checkFn: isProjetPlanete,
+      id: "ProjetPlanete",
+      delay: 1,
+    },
+    {
+      checkFn: isMessagePaix,
+      id: "MessagePaix",
+      delay: 1,
+    },
+  ];
+    // Gestion unifiée du focus au chargement du bloc Jeunes
+  useEffect(() => {
+    sectionsProgrammes.forEach(({ checkFn, id, delay }) => {
+      if (checkFn()) {
+        setActiveHash(id);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            element.focus({ preventScroll: true });
+          }
+        }, delay);
+      }
+    });
+  }, []);
+  
+  /*Fin Programmes*/ 
 
   return (
     <>
@@ -891,7 +959,18 @@ const isOrganisation = () =>
                             Programmes Internationaux
                           </h1>
                           <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
-                            <Link href="">Projet planete</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Projet-planète" || isProjetPlanete()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Programmes-Internationaux#Projet-planète";
+                                setActiveHash("Projet-planète");
+                              }}
+                            >Projet planète</Link>
                             <Link href="">Messager de la paix</Link>
                           </div>
                         </div>
