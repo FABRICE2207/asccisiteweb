@@ -166,7 +166,7 @@ const CardOrganisationAscci = () => {
           </div>
 
           {/* Zone de contenu */}
-          <div className="p-6 mt-4">
+          <div className="p-2 mt-4">
             {ActiveComponent ? (
               <ActiveComponent />
             ) : (

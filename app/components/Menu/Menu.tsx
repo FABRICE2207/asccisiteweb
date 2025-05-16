@@ -175,7 +175,6 @@ const isOrganisation = () =>
       hash: "#Commissaire-aux-comptes",
     });
 
-
   const isJeunesConseillers = () =>
     checkCurrentSectionOrganisationAscci({
       path: "/Jeunes-conseillers",
@@ -255,145 +254,109 @@ const isOrganisation = () =>
   }, []);
 
 
-  // Vérifie si l'URL correspond à /Scout-Ascci#Projet-pedagogique
-  // const isProjetPedagogique = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return window.location.pathname === '/Scout-Ascci' &&
-  //            window.location.hash === '#Projet-pedagogique';
-  //   }
-  //   return false;
-  // };
 
-  // const isMouvementScout = () => {
-  //   if (typeof window !== 'undefined') {
-  //     console.log('lms-true');
-  //     console.log(window.location.pathname === '/Scout-Ascci' &&
-  //            window.location.hash === '#Le-Mouvement-Scout');
+    /* Les fonction pour du Jeunes */ 
+  const isEnvironnement = () =>
+    checkCurrentSectionJeunes({
+      path: "/Environnement",
+      hash: "#Environnement",
+    });
+  const isEducation = () =>
+    checkCurrentSectionJeunes({
+      path: "/Education",
+      hash: "#Education",
+    });
+  const isPaix = () =>
+    checkCurrentSectionJeunes({
+      path: "/Paix",
+      hash: "#Paix",
+    });
+   const isDiversiteInclusion = () =>
+    checkCurrentSectionJeunes({
+      path: "/Diversite-et-inclusion",
+      hash: "#Diversite-et-inclusion",
+    });
+   const isActionHumanitaire = () =>
+    checkCurrentSectionJeunes({
+      path: "/Diversite-et-inclusion",
+      hash: "#Diversite-et-inclusion",
+    });
+   const isCultureTradition = () =>
+    checkCurrentSectionJeunes({
+      path: "/Culture-et-tradition",
+      hash: "#Culture-et-tradition",
+    });
+/*Fin fonction*/
 
-  //     return window.location.pathname === '/Scout-Ascci' &&
-  //            window.location.hash === '#Le-Mouvement-Scout';
-  //   }
-  //   console.log('lms-false');
-  //   return false;
-  // };
+      // pour afficher le lien et le focus à chaque clique du bloc Jeunes
+  const checkCurrentSectionJeunes = (section: {
+    path: string;
+    hash: string;
+    debug?: boolean;
+  }) => {
+    if (typeof window === "undefined") return false;
 
-  //   const isMethodeScoute = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return window.location.pathname === '/Scout-Ascci' &&
-  //            window.location.hash === '#Methode-Scoute';
-  //   }
-  //   return false;
-  // };
+    if (section.debug) {
+      console.log("checking section:", section.path + section.hash);
+      console.log("current:", window.location.pathname + window.location.hash);
+    }
 
-  //   const isPromesseLoiScoutes = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return window.location.pathname === '/Promesse-et-loi-scoutes' &&
-  //            window.location.hash === '#Promesse-et-loi-scoutes';
-  //   }
-  //   return false;
-  // };
+    return (
+      window.location.pathname === section.path &&
+      window.location.hash === section.hash
+    );
+  };
 
-  //   const isHistoireScoutisme = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return window.location.pathname === '/Histoire-du-scoutisme' &&
-  //            window.location.hash === '#Histoire-du-scoutisme';
-  //   }
-  //   return false;
-  // };
-
-  //   const isFormation = () => {
-  //   if (typeof window !== 'undefined') {
-  //     return window.location.pathname === '/Formation' &&
-  //            window.location.hash === '#Formation';
-  //   }
-  //   return false;
-  // };
-
-
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isProjetPedagogique()) {
-  //     setActiveHash('Projet-pedagogique');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('Projet-pedagogique');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 1);
-  //   }
-  // }, []);
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isMouvementScout()) {
-  //     setActiveHash('Le-Mouvement-Scout');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('Le-Mouvement-Scout');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 10);
-  //   }
-  // }, []);
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isMethodeScoute()) {
-  //     setActiveHash('MethodeScoute');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('MethodeScoute');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 10);
-  //   }
-  // }, []);
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isPromesseLoiScoutes()) {
-  //     setActiveHash('PromesseLoiScoutes');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('PromesseLoiScoutes');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 10);
-  //   }
-  // }, []);
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isHistoireScoutisme()) {
-  //     setActiveHash('HistoireScoutisme');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('HistoireScoutisme');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 10);
-  //   }
-  // }, []);
-
-  // // Gestion du focus au chargement
-  // useEffect(() => {
-  //   if (isFormation()) {
-  //     setActiveHash('Formation');
-  //     setTimeout(() => {
-  //       const element = document.getElementById('Formation');
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: 'smooth' });
-  //         element.focus({ preventScroll: true });
-  //       }
-  //     }, 10);
-  //   }
-  // }, []);
+      const sectionsJeunes = [
+    {
+      checkFn: isEnvironnement,
+      id: "Environnement",
+      delay: 1,
+    },
+    {
+      checkFn: isEducation,
+      id: "Education",
+      delay: 1,
+    },
+    {
+      checkFn: isPaix,
+      id: "Paix",
+      delay: 1,
+    },
+    {
+      checkFn: isDiversiteInclusion,
+      id: "Diversite-et-inclusion",
+      delay: 1,
+    },
+    {
+      checkFn: isActionHumanitaire,
+      id: "Action-humanitaire",
+      delay: 1,
+    },
+    {
+      checkFn: isCultureTradition,
+      id: "Culture-et-tradition",
+      delay: 1,
+    },
+  ];
+    // Gestion unifiée du focus au chargement du bloc Jeunes
+  useEffect(() => {
+    sectionsJeunes.forEach(({ checkFn, id, delay }) => {
+      if (checkFn()) {
+        setActiveHash(id);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            element.focus({ preventScroll: true });
+          }
+        }, delay);
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -697,12 +660,78 @@ const isOrganisation = () =>
                             </h1>
                           </div>
                           <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
-                            <Link href="">Environnement</Link>
-                            <Link href="">Education</Link>
-                            <Link href="">Paix</Link>
-                            <Link href="">Diversité et inclusion</Link>
-                            <Link href="">Action humanitaire</Link>
-                            <Link href="">Culture et tradition</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Environnement" || isEnvironnement()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Environnement";
+                                setActiveHash("Environnement");
+                              }}
+                            >Environnement</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Education" || isEducation()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Education";
+                                setActiveHash("Education");
+                              }}
+                            >Education</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Paix" || isPaix()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Paix";
+                                setActiveHash("Paix");
+                              }}
+                            >Paix</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "DiversiteInclusion" || isDiversiteInclusion()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Diversite-et-inclusion";
+                                setActiveHash("Diversite-et-inclusion");
+                              }}
+                            >Diversité et inclusion</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "ActionHumanitaire" || isActionHumanitaire()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Action-humanitaire";
+                                setActiveHash("Action-humanitaire");
+                              }}
+                            >Action humanitaire</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "CultureTradition" || isCultureTradition()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Culture-et-tradition";
+                                setActiveHash("Culture-et-tradition");
+                              }}
+                            >Culture et tradition</Link>
                           </div>
                         </div>
 
