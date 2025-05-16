@@ -1,62 +1,55 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Environnement from "../Jeunes/Environnement";
-import Education from "../Jeunes/Education";
-import Paix from "../Jeunes/Paix";
-import DiversiteInclusion from "../Jeunes/DiversiteInclusion";
-import ActionHumanitaire from "../Jeunes/ActionHumanitaire";
-import CultureTradition from "../Jeunes/CultureTradition";
-
+import BadgeBois from "../Adultes/BadgeBois";
+import Gnepka from "../Adultes/Gnepka";
+import Stappro from "../Adultes/Stappro";
+import CampFormationRegion from "../Adultes/CampFormationRegion";
 
 const CONTENT_COMPONENTS = {
-  "Environnement": Environnement,
-  "Education": Education,
-  "Paix": Paix,
-  "Diversité-et-inclusion": DiversiteInclusion,
-  "Action-humanitaire": ActionHumanitaire,
-  "Culture-et-tradition": CultureTradition,
+  "Badge-de-bois": BadgeBois,
+  "Gnépka": Gnepka,
+  "Stappro": Stappro,
+  "Camp-formation-en-region": CampFormationRegion,
 };
 
-const CardJeunes = () => {
+const CardAdules = () => {
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (typeof window !== "undefined") {
+        const hash = decodeURIComponent(window.location.hash.substring(1)); // Décode les caractères encodés
+        if (CONTENT_COMPONENTS.hasOwnProperty(hash)) {
+          setActiveComponent(hash as keyof typeof CONTENT_COMPONENTS);
+        }
+      }
+    };
 
-  // Détecter le hash au chargement et lors des changements
-     useEffect(() => {
-       const handleHashChange = () => {
-         if (typeof window !== "undefined") {
-           const hash = decodeURIComponent(window.location.hash.substring(1)); // Décode les caractères encodés
-           if (CONTENT_COMPONENTS.hasOwnProperty(hash)) {
-             setActiveComponent(hash as keyof typeof CONTENT_COMPONENTS);
-           }
-         }
-       };
-   
-       window.addEventListener("hashchange", handleHashChange);
-       handleHashChange();
-   
-       return () => window.removeEventListener("hashchange", handleHashChange);
-     }, []);
-   
-     const [activeComponent, setActiveComponent] = useState<
-       keyof typeof CONTENT_COMPONENTS | null
-     >(null);
-   
-     useEffect(() => {
-       if (typeof window !== "undefined" && window.location.hash) {
-         const hash = decodeURIComponent(window.location.hash.substring(1));
-         if (CONTENT_COMPONENTS.hasOwnProperty(hash)) {
-           setActiveComponent(hash as keyof typeof CONTENT_COMPONENTS);
-         }
-       }
-     }, []);
-   
-     const handleLinkClick = (id: keyof typeof CONTENT_COMPONENTS) => {
-       setActiveComponent(id);
-       window.history.pushState(null, "", `#${encodeURIComponent(id)}`);
-     };
-   
-     const ActiveComponent = activeComponent
-       ? CONTENT_COMPONENTS[activeComponent]
-       : null;
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange();
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const [activeComponent, setActiveComponent] = useState<
+    keyof typeof CONTENT_COMPONENTS | null
+  >(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hash = decodeURIComponent(window.location.hash.substring(1));
+      if (CONTENT_COMPONENTS.hasOwnProperty(hash)) {
+        setActiveComponent(hash as keyof typeof CONTENT_COMPONENTS);
+      }
+    }
+  }, []);
+
+  const handleLinkClick = (id: keyof typeof CONTENT_COMPONENTS) => {
+    setActiveComponent(id);
+    window.history.pushState(null, "", `#${encodeURIComponent(id)}`);
+  };
+
+  const ActiveComponent = activeComponent
+    ? CONTENT_COMPONENTS[activeComponent]
+    : null;
 
   return (
     <div className="lg:mx-40 md:mx-10 lg:mt-[-15px] mb-15">
@@ -172,4 +165,4 @@ const CardJeunes = () => {
   );
 };
 
-export default CardJeunes;
+export default CardAdules;

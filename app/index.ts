@@ -1,3 +1,3 @@
-export { default as MouvementScout } from './components/Mouvement-scout/MouvementScout';
-export { default as ProjetPedagogique } from './components/Mouvement-scout/ProjetPedagogique';
-export { default as MethodeScoute } from './components/Mouvement-scout/MethodeScoute';
+export { default as MouvementScout } from './components/ScoutAscci/MouvementScout';
+export { default as ProjetPedagogique } from './components/ScoutAscci/ProjetPedagogique';
+export { default as MethodeScoute } from './components/ScoutAscci/MethodeScoute';

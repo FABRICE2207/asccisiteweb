@@ -38,7 +38,7 @@ const Menu = () => {
   const isProjetPedagogique = () =>
     checkCurrentSectionScoutAscci({
       path: "/Scout-Ascci",
-      hash: "#Projet-pedagogique",
+      hash: "#Projet-pédagogique",
     });
 
   const isMouvementScout = () =>
@@ -51,7 +51,7 @@ const Menu = () => {
   const isMethodeScoute = () =>
     checkCurrentSectionScoutAscci({
       path: "/Scout-Ascci",
-      hash: "#Methode-Scoute",
+      hash: "#Méthode-Scoute",
     });
 
   const isPromesseLoiScoutes = () =>
@@ -165,7 +165,7 @@ const isOrganisation = () =>
 
   const isConseilAines = () =>
     checkCurrentSectionOrganisationAscci({
-      path: "/Conseil-des-aines",
+      path: "/Conseil-des-ainés",
       hash: "#Conseil-des-aines",
     });
 
@@ -254,7 +254,7 @@ const isOrganisation = () =>
   }, []);
 
 
-
+/*Début Jeunes*/ 
     /* Les fonction pour du Jeunes */ 
   const isEnvironnement = () =>
     checkCurrentSectionJeunes({
@@ -273,7 +273,7 @@ const isOrganisation = () =>
     });
    const isDiversiteInclusion = () =>
     checkCurrentSectionJeunes({
-      path: "/Diversite-et-inclusion",
+      path: "/Diversité-et-inclusion",
       hash: "#Diversite-et-inclusion",
     });
    const isActionHumanitaire = () =>
@@ -288,7 +288,7 @@ const isOrganisation = () =>
     });
 /*Fin fonction*/
 
-      // pour afficher le lien et le focus à chaque clique du bloc Jeunes
+  // pour afficher le lien et le focus à chaque clique du bloc Jeunes
   const checkCurrentSectionJeunes = (section: {
     path: string;
     hash: string;
@@ -342,6 +342,93 @@ const isOrganisation = () =>
     // Gestion unifiée du focus au chargement du bloc Jeunes
   useEffect(() => {
     sectionsJeunes.forEach(({ checkFn, id, delay }) => {
+      if (checkFn()) {
+        setActiveHash(id);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            element.focus({ preventScroll: true });
+          }
+        }, delay);
+      }
+    });
+  }, []);
+
+  /*Fin Jeunes*/
+
+  /*Début Adules*/ 
+    /* Les fonction pour du Jeunes */ 
+  const isBadgeBois = () =>
+    checkCurrentSectionAdultes({
+      path: "/BadgeBois",
+      hash: "#BadgeBois",
+    });
+  const isGnepka = () =>
+    checkCurrentSectionAdultes({
+      path: "/Gnépka",
+      hash: "#Gnepka",
+    });
+  const isStappro = () =>
+    checkCurrentSectionAdultes({
+      path: "/Stappro",
+      hash: "#Stappro",
+    });
+   const isCampFormationRegion = () =>
+    checkCurrentSectionAdultes({
+      path: "/Diversite-et-inclusion",
+      hash: "#Diversite-et-inclusion",
+    });
+
+/*Fin fonction*/
+
+  // pour afficher le lien et le focus à chaque clique du bloc Jeunes
+  const checkCurrentSectionAdultes = (section: {
+    path: string;
+    hash: string;
+    debug?: boolean;
+  }) => {
+    if (typeof window === "undefined") return false;
+
+    if (section.debug) {
+      console.log("checking section:", section.path + section.hash);
+      console.log("current:", window.location.pathname + window.location.hash);
+    }
+
+    return (
+      window.location.pathname === section.path &&
+      window.location.hash === section.hash
+    );
+  };
+
+      const sectionsAdultes = [
+    {
+      checkFn: isBadgeBois,
+      id: "BadgeBois",
+      delay: 1,
+    },
+    {
+      checkFn: isGnepka,
+      id: "Gnepka",
+      delay: 1,
+    },
+    {
+      checkFn: isStappro,
+      id: "Stappro",
+      delay: 1,
+    },
+    {
+      checkFn: isCampFormationRegion,
+      id: "Camp-formation-en-region",
+      delay: 1,
+    }
+  ];
+    // Gestion unifiée du focus au chargement du bloc Jeunes
+  useEffect(() => {
+    sectionsAdultes.forEach(({ checkFn, id, delay }) => {
       if (checkFn()) {
         setActiveHash(id);
         setTimeout(() => {
@@ -467,7 +554,7 @@ const isOrganisation = () =>
                             <Link
                               href=""
                               className={`${
-                                activeHash === "Projet-pedagogique" ||
+                                activeHash === "Projet-pédagogique" ||
                                 isProjetPedagogique()
                                   ? null
                                   : null
@@ -475,8 +562,8 @@ const isOrganisation = () =>
                               onClick={(e) => {
                                 e.preventDefault();
                                 window.location.href =
-                                  "/Scout-Ascci#Projet-pedagogique";
-                                setActiveHash("Projet-pedagogique");
+                                  "/Scout-Ascci#Projet-pédagogique";
+                                setActiveHash("Projet-pédagogique");
                               }}
                             >
                               Projet pédagogique
@@ -484,7 +571,7 @@ const isOrganisation = () =>
                             <Link
                               href=""
                               className={`${
-                                activeHash === "Methode-scoute" ||
+                                activeHash === "Méthode-scoute" ||
                                 isMethodeScoute()
                                   ? null
                                   : null
@@ -492,8 +579,8 @@ const isOrganisation = () =>
                               onClick={(e) => {
                                 e.preventDefault();
                                 window.location.href =
-                                  "/Scout-Ascci#Methode-scoute";
-                                setActiveHash("Methode-scoute");
+                                  "/Scout-Ascci#Méthode-scoute";
+                                setActiveHash("Méthode-scoute");
                               }}
                             >
                               Méthode scoute
@@ -599,14 +686,14 @@ const isOrganisation = () =>
                             </Link>
                             <Link href=""
                               className={`${
-                                activeHash === "Conseil-des-aines" || isConseilAines()
+                                activeHash === "Conseil-des-ainés" || isConseilAines()
                                   ? null
                                   : null
                               }`}
                               onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = "/Organisation-Ascci#Conseil-des-aines";
-                                setActiveHash("Conseil-des-aines");
+                                window.location.href = "/Organisation-Ascci#Conseil-des-ainés";
+                                setActiveHash("Conseil-des-ainés");
                               }}
                             >Conseil des ainés</Link>
                             <Link href=""
@@ -698,14 +785,14 @@ const isOrganisation = () =>
                             >Paix</Link>
                             <Link href=""
                               className={`${
-                                activeHash === "DiversiteInclusion" || isDiversiteInclusion()
+                                activeHash === "Diversité-et-inclusion" || isDiversiteInclusion()
                                   ? null
                                   : null
                               }`}
                               onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = "/Jeunes#Diversite-et-inclusion";
-                                setActiveHash("Diversite-et-inclusion");
+                                window.location.href = "/Jeunes#Diversité-et-inclusion";
+                                setActiveHash("Diversité-et-inclusion");
                               }}
                             >Diversité et inclusion</Link>
                             <Link href=""
@@ -745,10 +832,54 @@ const isOrganisation = () =>
                             </h1>
                           </div>
                           <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
-                            <Link href="">Badge de bois</Link>
-                            <Link href="">Gnékpa</Link>
-                            <Link href="">Stappro</Link>
-                            <Link href="">Camp formation en région</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "BadgeBois" || isBadgeBois()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Adultes#Badge-de-bois";
+                                setActiveHash("Badge-de-bois");
+                              }}
+                            >Badge de bois</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Gnépka" || isGnepka()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Adultes#Gnépka";
+                                setActiveHash("Gnépka");
+                              }}
+                            >Gnékpa</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Stappro" || isStappro()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Adultes#Stappro";
+                                setActiveHash("Stappro");
+                              }}
+                            >Stappro</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "CampFormationRegion" || isCampFormationRegion()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Adultes#Camp-formation-en-region";
+                                setActiveHash("Camp-formation-en-region");
+                              }}
+                            >Camp formation en région</Link>
                           </div>
                         </div>
 
