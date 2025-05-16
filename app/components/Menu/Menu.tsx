@@ -165,8 +165,8 @@ const isOrganisation = () =>
 
   const isConseilAines = () =>
     checkCurrentSectionOrganisationAscci({
-      path: "/Conseil-des-ainés",
-      hash: "#Conseil-des-ainés",
+      path: "/Conseil-des-aines",
+      hash: "#Conseil-des-aines",
     });
 
   const isCommissaireComptes = () =>
@@ -201,7 +201,7 @@ const isOrganisation = () =>
     },
     {
       checkFn: isConseilAines,
-      id: "Conseil-des-ainés",
+      id: "Conseil-des-aines",
       delay: 10,
     },
     {
@@ -636,14 +636,14 @@ const isOrganisation = () =>
                             </Link>
                             <Link href=""
                               className={`${
-                                activeHash === "Conseil-des-ainés" || isConseilAines()
+                                activeHash === "Conseil-des-aines" || isConseilAines()
                                   ? null
                                   : null
                               }`}
                               onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = "/Organisation-Ascci#Conseil-des-ainés";
-                                setActiveHash("Conseil-des-ainés");
+                                window.location.href = "/Organisation-Ascci#Conseil-des-aines";
+                                setActiveHash("Conseil-des-aines");
                               }}
                             >Conseil des ainés</Link>
                             <Link href=""
@@ -687,16 +687,16 @@ const isOrganisation = () =>
                   >
                     <div className="bg-white py-10 mt-48">
                       <div className="flex justify-evenly items-start mt-2">
-                        <div>
+                        <div className="text-[#000080]">
                           <div>
                             <h1
-                              className="text-[[#000080]] text-2xl"
+                              className="text-2xl"
                               style={{ fontFamily: "ChunkFiveEx" }}
                             >
                               Jeunes
                             </h1>
                           </div>
-                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-[[#000080]] text-semibold">
+                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
                             <Link href="">Environnement</Link>
                             <Link href="">Education</Link>
                             <Link href="">Paix</Link>
@@ -706,16 +706,16 @@ const isOrganisation = () =>
                           </div>
                         </div>
 
-                        <div>
+                        <div className="text-[#000080]">
                           <div>
                             <h1
-                              className="text-[[#000080]] text-2xl"
+                              className="text-2xl"
                               style={{ fontFamily: "ChunkFiveEx" }}
                             >
                               Adultes
                             </h1>
                           </div>
-                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-[[#000080]] text-semibold">
+                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
                             <Link href="">Badge de bois</Link>
                             <Link href="">Gnékpa</Link>
                             <Link href="">Stappro</Link>
@@ -723,14 +723,14 @@ const isOrganisation = () =>
                           </div>
                         </div>
 
-                        <div>
+                        <div className="text-[#000080]">
                           <h1
-                            className="text-[[#000080]] text-2xl"
+                            className="text-2xl"
                             style={{ fontFamily: "ChunkFiveEx" }}
                           >
                             Programmes Internationaux
                           </h1>
-                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-[[#000080]] text-semibold">
+                          <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
                             <Link href="">Projet planete</Link>
                             <Link href="">Messager de la paix</Link>
                           </div>

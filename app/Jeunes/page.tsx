@@ -2,8 +2,7 @@
 
 import React from 'react'
 import Menu from '../components/Menu/Menu'
-import CardScoutAscci from '../components/CardScoutAscci/CardScoutAscci'
-
+import CardJeunes from '../components/CardJeunes/CardJeunes'
 
 const page = () => {
 
@@ -19,7 +18,7 @@ const page = () => {
         <Menu />
       
       </div>
-      <CardScoutAscci/>
+      <CardJeunes/>
     </div>
   )
 }

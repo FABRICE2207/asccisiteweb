@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header/Header";
+import FooterBefore from './components/FooterBefore/FooterBefore';
 import Footer from "./components/footer/Footer";
 
 // Les métadonnée pour la recherche sur le web
@@ -52,6 +53,9 @@ export default function RootLayout({
         {/* Le header */}
         <Header />
           {children}
+        
+        {/* Footer avant */}
+        <FooterBefore />
         {/* Le footer */}
         <Footer />
       </body>

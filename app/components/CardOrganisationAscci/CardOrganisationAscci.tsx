@@ -11,7 +11,7 @@ const CONTENT_COMPONENTS = {
   Organisation: Organisation,
   "Equipe-nationale": EquipeNationale,
   "Conseil-national-direction": ConseilNationalDirection,
-  "Conseil-des-ainés": ConseilAines,
+  "Conseil-des-aines": ConseilAines,
   "Commissaire-aux-comptes": CommissaireComptes,
   "Jeunes-conseillers": JeunesConseillers,
 };
@@ -156,7 +156,7 @@ const CardOrganisationAscci = () => {
                 window.location.hash = `#${selectedId}`;
               }}
             >
-              <option value="">Sélectionnez une rubrique</option>
+              {/* <option value="">Sélectionnez une rubrique</option> */}
               {Object.keys(CONTENT_COMPONENTS).map((id) => (
                 <option key={id} value={id}>
                   {id.split("-").join(" ")}
