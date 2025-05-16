@@ -472,14 +472,14 @@ const Header = () => {
                     </a>
                     <a 
                       onClick={closeMenu}
-                      href="/Scout-Ascci#Projet-pedagogique"
+                      href="/Scout-Ascci#Projet-pédagogique"
                       className="flex justify-between py-2 border-b border-white"
                     >
                       <h4>Projet pédagogique</h4>
                     </a>
                     <a 
                       onClick={closeMenu}
-                      href="/Scout-Ascci#Methode-scoute"
+                      href="/Scout-Ascci#Méthode-scoute"
                       className="flex justify-between py-2 border-b border-white">
                       <h4>Méthode scoute</h4>
                     </a>
