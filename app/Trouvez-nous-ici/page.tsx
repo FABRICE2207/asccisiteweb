@@ -3,7 +3,6 @@
 import React from 'react'
 import Menu from '../components/Menu/Menu'
 import CardTrouvezNous from '../components/CardTrouvezNous/CardTrouvezNous'
-CardTrouvezNous
 
 const page = () => {
 
