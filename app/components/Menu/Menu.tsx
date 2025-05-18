@@ -513,6 +513,92 @@ const isOrganisation = () =>
   
   /*Fin Programmes*/ 
 
+      /*Début Trouvez Moi Ici*/ 
+    /* Les fonction pour du Trouvez Moi Ici */ 
+  const isRegion = () =>
+    checkCurrentSectionTrouvezNous({
+      path: "/Région",
+      hash: "#Region",
+    });
+  const isDistrict = () =>
+    checkCurrentSectionTrouvezNous({
+      path: "/District",
+      hash: "#District",
+    });
+  const isGroupe = () =>
+    checkCurrentSectionTrouvezNous({
+      path: "/Groupe",
+      hash: "#Groupe",
+    });
+  const isDansMonde = () =>
+    checkCurrentSectionTrouvezNous({
+      path: "/Dans-le-monde",
+      hash: "#Dans-le-mondee",
+    });
+/*Fin fonction*/
+
+  // pour afficher le lien et le focus à chaque clique du bloc Trouvez Moi Ici
+  const checkCurrentSectionTrouvezNous = (section: {
+    path: string;
+    hash: string;
+    debug?: boolean;
+  }) => {
+    if (typeof window === "undefined") return false;
+
+    if (section.debug) {
+      console.log("checking section:", section.path + section.hash);
+      console.log("current:", window.location.pathname + window.location.hash);
+    }
+
+    return (
+      window.location.pathname === section.path &&
+      window.location.hash === section.hash
+    );
+  };
+
+      const sectionsTrouvezNous = [
+    {
+      checkFn: isRegion,
+      id: "Region",
+      delay: 1,
+    },
+    {
+      checkFn: isDistrict,
+      id: "District",
+      delay: 1,
+    },
+    {
+      checkFn: isGroupe,
+      id: "Groupe",
+      delay: 1,
+    },
+    {
+      checkFn: isDansMonde,
+      id: "DansMonde",
+      delay: 1,
+    },
+  ];
+    // Gestion unifiée du focus au chargement du bloc Trouvez Moi Ici
+  useEffect(() => {
+    sectionsTrouvezNous.forEach(({ checkFn, id, delay }) => {
+      if (checkFn()) {
+        setActiveHash(id);
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            element.focus({ preventScroll: true });
+          }
+        }, delay);
+      }
+    });
+  }, []);
+  
+  /* Fin Trouvez Moi Ici */ 
+
   return (
     <>
       <div
@@ -1009,10 +1095,55 @@ const isOrganisation = () =>
                           </h1>
 
                           <div className="flex flex-col justify-start items-start gap-2 text-semibold">
-                            <Link href="">Région</Link>
-                            <Link href="">District</Link>
-                            <Link href="">Groupe</Link>
-                            <Link href="">Dans le monde</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Région" || isRegion()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Trouvez-nous-ici#Région";
+                                setActiveHash("Région");
+                              }}
+                            >Région</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "District" || isDistrict()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Trouvez-nous-ici#District";
+                                setActiveHash("District");
+                              }}
+                            >District</Link>
+                            <Link 
+                              href=""
+                              className={`${
+                                activeHash === "Groupe" || isGroupe()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Trouvez-nous-ici#Groupe";
+                                setActiveHash("Groupe");
+                              }}
+                            >Groupe</Link>
+                            <Link href=""
+                              className={`${
+                                activeHash === "Dans-le-monde" || isDansMonde()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Trouvez-nous-ici#Dans-le-monde";
+                                setActiveHash("Dans-le-monde");
+                              }}
+                            >Dans le monde</Link>
                           </div>
                         </div>
                       </div>
