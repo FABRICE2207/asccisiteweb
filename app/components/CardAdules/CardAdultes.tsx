@@ -108,7 +108,7 @@ const CardAdules = () => {
             )}
           </div> */}
 
-          <div className="hidden md:flex flex-row justify-between items-center gap-2 text-black font-extrabold">
+          <div className="hidden md:flex flex-row justify-evenly items-center gap-2 text-black font-extrabold">
             {Object.keys(CONTENT_COMPONENTS).map((id) => (
               <Link
                 key={id}
