@@ -389,7 +389,7 @@ const Header = () => {
                     </a>
                     <a 
                       onClick={closeMenu} 
-                      href="/Organisation-Ascci#CND" 
+                      href="/Organisation-Ascci#Conseil-national-direction" 
                       className="flex justify-between py-2 border-b border-white">
                       <h4>CND</h4>
                     </a>
@@ -470,7 +470,7 @@ const Header = () => {
                     >
                       <h4>Région</h4>
                     </a>
-                    <a href="/Trouvez-nous-ici#Distict" className="flex justify-between py-2 border-b border-white"
+                    <a href="/Trouvez-nous-ici#District" className="flex justify-between py-2 border-b border-white"
                        onClick={closeMenu}
                     >
                       <h4>District</h4>
@@ -480,7 +480,9 @@ const Header = () => {
                     >
                       <h4>Groupe</h4>
                     </a>
-                    <a href="/Trouvez-nous-ici#Dans-le-monde" className="flex justify-between py-2 border-b border-white">
+                    <a href="/Trouvez-nous-ici#Dans-le-monde"
+                      onClick={closeMenu}
+                      className="flex justify-between py-2 border-b border-white">
                       <h4>Dans le monde</h4>
                     </a>
 
