@@ -6,7 +6,7 @@ const DiversiteInclusion = () => (
     <div className="mt-15">
       <p className="text-[18px] text-[#000080]">
       Nous croyons en la richesse de la diversité. Nous accueillons tous les 
-      jeunes, sans distinction d'origine, de culture ou de croyance, et nous 
+      jeunes, sans distinction d&apos;origine, de culture ou de croyance, et nous 
       veillons à créer un environnement inclusif et respectueux.
       </p>
     </div>

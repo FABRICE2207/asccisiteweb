@@ -8,7 +8,7 @@ const PromesseLoiScoutes = () => (
         Chaque scout fait une promesse qui reflète son engagement envers les 
         valeurs du scoutisme : honorer Dieu, servir son pays et aider les 
         autres. La loi scoute guide nos actions et nos comportements, en mettant 
-        l'accent sur le respect, la loyauté, la solidarité et la responsabilité.
+        l&apos;accent sur le respect, la loyauté, la solidarité et la responsabilité.
 
       </p>
     </div>

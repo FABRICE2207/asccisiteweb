@@ -7,7 +7,7 @@ const Education = () => (
       <p className="text-[18px] text-[#000080]">
         Nous offrons des programmes éducatifs qui développent des compétences 
         pratiques et théoriques. Nos formations portent sur des thèmes variés, 
-        tels que le leadership, le secourisme et l'éducation à la santé.
+        tels que le leadership, le secourisme et l&apos;éducation à la santé.
       </p>
     </div>
   </div>

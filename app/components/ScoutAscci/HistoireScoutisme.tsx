@@ -6,11 +6,11 @@ const HistoireScoutisme = () => (
     <div className="mt-15">
       <p className="text-[18px] text-[#000080]">
        Le scoutisme a été fondé en 1907 par Robert Baden-Powell. Le scoutisme 
-      catholique en Côte d'Ivoire a une histoire riche et dynamique, qui 
-      s'inscrit dans le cadre plus large du mouvement scout mondial. Le 
-      scoutisme a été introduit en Côte d'Ivoire le 06 octobre 1937 à la 
+      catholique en Côte d&apos;Ivoire a une histoire riche et dynamique, qui 
+      s&apos;inscrit dans le cadre plus large du mouvement scout mondial. Le 
+      scoutisme a été introduit en Côte d&apos;Ivoire le 06 octobre 1937 à la 
       paroisse Sainte Jeanne d’Arc de Treichville, et il a rapidement gagné en 
-      popularité, notamment grâce à l'engagement des missions catholiques.
+      popularité, notamment grâce à l&apos;engagement des missions catholiques.
 
       </p>
       <p className="text-[18px] text-[#000080] mt-5">
@@ -20,13 +20,13 @@ const HistoireScoutisme = () => (
       inculquant des valeurs telles que la solidarité, le respect et le service.
       </p>
       <p className="text-[18px] text-[#000080] mt-5">
-       Le scoutisme catholique a également joué un rôle important dans l'éducation des jeunes, en leur offrant des activités variées comme des camps, des randonnées et des projets communautaires. 
+       Le scoutisme catholique a également joué un rôle important dans l&apos;éducation des jeunes, en leur offrant des activités variées comme des camps, des randonnées et des projets communautaires. 
        Ces expériences ont permis aux jeunes de développer des compétences de leadership et de travail en équipe, tout en renforçant leur foi.
       </p>
       <p className="text-[18px] text-[#000080] mt-5">
-       Au fil des décennies, le scoutisme catholique en Côte d'Ivoire a 
-      continué à évoluer, s'adaptant aux réalités socioculturelles du pays. 
-      Aujourd'hui, il reste un mouvement actif qui contribue à la formation 
+       Au fil des décennies, le scoutisme catholique en Côte d&apos;Ivoire a 
+      continué à évoluer, s&apos;adaptant aux réalités socioculturelles du pays. 
+      Aujourd&apos;hui, il reste un mouvement actif qui contribue à la formation 
       des jeunes et à leur engagement dans la société, tout en promouvant les 
       valeurs chrétiennes.
       </p>
