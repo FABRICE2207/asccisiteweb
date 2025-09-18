@@ -256,6 +256,11 @@ const isOrganisation = () =>
 
 /*Début Jeunes*/ 
     /* Les fonction pour du Jeunes */ 
+  const isProtectionJeunes = () =>
+    checkCurrentSectionJeunes({
+      path: "/Protection-des-jeunes",
+      hash: "#Protection-des-jeunes",
+    });
   const isEnvironnement = () =>
     checkCurrentSectionJeunes({
       path: "/Environnement",
@@ -308,6 +313,11 @@ const isOrganisation = () =>
   };
 
       const sectionsJeunes = [
+    {
+      checkFn: isProtectionJeunes,
+      id: "Protection-des-jeunes",
+      delay: 1,
+    },
     {
       checkFn: isEnvironnement,
       id: "Environnement",
@@ -901,6 +911,18 @@ const isOrganisation = () =>
                             </h1>
                           </div>
                           <div className="flex flex-col justify-start items-start mt-5 gap-2 text-semibold">
+                            <Link href=""
+                              className={`${
+                                activeHash === "Protection-des-jeunes" || isProtectionJeunes()
+                                  ? null
+                                  : null
+                              }`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = "/Jeunes#Protection-jeunes";
+                                setActiveHash("Protection-des-jeunes");
+                              }}
+                            >Protection des jeunes</Link>
                             <Link href=""
                               className={`${
                                 activeHash === "Environnement" || isEnvironnement()

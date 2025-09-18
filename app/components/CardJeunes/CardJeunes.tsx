@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import ProtectionJeunes from "../Jeunes/ProtectionJeunes";
 import Environnement from "../Jeunes/Environnement";
 import Education from "../Jeunes/Education";
 import Paix from "../Jeunes/Paix";
@@ -9,6 +10,7 @@ import CultureTradition from "../Jeunes/CultureTradition";
 
 
 const CONTENT_COMPONENTS = {
+  "Protection-des-jeunes": ProtectionJeunes,
   "Environnement": Environnement,
   "Education": Education,
   "Paix": Paix,
