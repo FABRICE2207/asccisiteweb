@@ -14,7 +14,8 @@ const Actu = () => {
       py-10 gap-5 p-8'>
 
       <div className='flex flex-col w-full
-      '>
+      '  data-aos="fade-up"
+        data-aos-delay="600">
         <div className=''>
           <Image
             src={imagefille}
@@ -28,7 +29,7 @@ const Actu = () => {
           <div className='p-8 bg-white'>
             <h1 className='text-[#1bb606] text-3xl' style={{ fontFamily: 'ChunkFiveEx' }}>Lorem ipsum
             dolor sit amet,</h1>
-            <p className="mt-5 text-[#14148a]" style={{ fontFamily: 'MontserratRegular'}}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+            <p className="mt-5 text-[#14148a]" >Lorem ipsum dolor sit, amet consectetur adipisicing 
               elit. Sit cumque excepturi beatae at dicta est fuga 
               perferendis provident quidem amet quam ex ad quas odio, 
               </p>
@@ -38,7 +39,7 @@ const Actu = () => {
         <div className='flex justify-center items-center'>
           <Link href="" className='bg-gradient-to-l from-orange-500 to-orange-700 px-5 py-2 text-white
           rounded-full'
-          style={{ fontFamily: 'MontserratRegular'}}>
+          >
             EN SAVOIR PLUS
           </Link>
         </div>
@@ -46,7 +47,8 @@ const Actu = () => {
       </div>
 
       <div className='flex flex-col w-full
-      '>
+      '  data-aos="fade-up"
+            data-aos-delay="1000">
         <div className=''>
           <Image
             src={imagefille}
@@ -60,7 +62,7 @@ const Actu = () => {
           <div className='p-8 bg-white'>
             <h1 className='text-[#1bb606] text-3xl' style={{ fontFamily: 'ChunkFiveEx' }}>Lorem ipsum
             dolor sit amet,</h1>
-            <p className="mt-5 text-[#14148a]" style={{ fontFamily: 'MontserratRegular'}}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+            <p className="mt-5 text-[#14148a]" >Lorem ipsum dolor sit, amet consectetur adipisicing 
               elit. Sit cumque excepturi beatae at dicta est fuga 
               perferendis provident quidem amet quam ex ad quas odio, 
               </p>
@@ -71,7 +73,7 @@ const Actu = () => {
          <div className='flex justify-center items-center'>
             <Link href="" className='bg-gradient-to-l from-orange-500 to-orange-700 px-5 py-2 text-white
             rounded-full'
-            style={{ fontFamily: 'MontserratRegular'}}>
+            >
               EN SAVOIR PLUS
             </Link>
           </div>
@@ -79,7 +81,8 @@ const Actu = () => {
       </div>
       
       <div className='flex flex-col w-full
-      '>
+      '  data-aos="fade-up"
+            data-aos-delay="1200">
         <div className=''>
           <Image
             src={imagefille}
@@ -93,7 +96,7 @@ const Actu = () => {
           <div className='p-8 bg-white'>
             <h1 className='text-[#1bb606] text-3xl' style={{ fontFamily: 'ChunkFiveEx' }}>Lorem ipsum
             dolor sit amet,</h1>
-            <p className="mt-5 text-[#14148a]" style={{ fontFamily: 'MontserratRegular'}}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+            <p className="mt-5 text-[#14148a]" >Lorem ipsum dolor sit, amet consectetur adipisicing 
               elit. Sit cumque excepturi beatae at dicta est fuga 
               perferendis provident quidem amet quam ex ad quas odio, 
               </p>
@@ -104,7 +107,7 @@ const Actu = () => {
          <div className='flex justify-center items-center'>
             <Link href="" className='bg-gradient-to-l from-orange-500 to-orange-700 px-5 py-2 text-white
             rounded-full' 
-            style={{ fontFamily: 'MontserratRegular'}}>
+            >
               EN SAVOIR PLUS
             </Link>
           </div>
@@ -115,7 +118,7 @@ const Actu = () => {
 
     <div className='flex justify-center items-center mb-10'>
       <Link href="/Actualite" className='bg-[#14148a] px-5 py-1 text-white rounded-full'
-      style={{ fontFamily: 'MontserratRegular'}}
+      
       >Voir toutes l’actualité</Link>
     </div>
 

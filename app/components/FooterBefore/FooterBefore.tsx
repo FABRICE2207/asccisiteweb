@@ -6,7 +6,6 @@ const FooterBefore = () => {
       
       <div className='px-10 py-10 flex lg:flex-row lg:px-20 md:w-full flex-col justify-between
        gap-10 md:flex md:flex-row text-white'>
-
         <div className='w-full'>
           <h1 className='font-black text-2xl'>Lorem ipsum <br />dolor sit amet,</h1>
           <p className='mt-5'>Lorem ipsum dolor sit amet 

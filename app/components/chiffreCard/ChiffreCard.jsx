@@ -17,7 +17,7 @@ const ChiffreCard = () => {
     { img: region, width: 80, value: "15", text: "Région Scoutes" },
     { img: district, width: 80, value: "145", text: "Districts" },
     { img: groupe, width: 100, value: "2300", text: "Groupes Scouts" },
-    { img: groupe, width: 100, value: "2300", text: "Groupes Scouts" },
+    
   ];
 
   const StatItem = ({ img, width, value, text }) => (

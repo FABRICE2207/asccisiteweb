@@ -38,12 +38,6 @@ export default function Home() {
 
       {/* Agir */}
       <Agir />
-
-      {/* Les pages : les routes */}
-      <main>
-        
-      </main>
-      
        
     </div>
   );

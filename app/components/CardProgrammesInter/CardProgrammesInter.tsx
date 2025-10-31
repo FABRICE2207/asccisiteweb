@@ -51,8 +51,8 @@ const CardProgrammesInter =() => {
         : null;
         
   return (
-    <div className="lg:mx-40 md:mx-10 lg:mt-[-15px] mb-15">
-      <div className="lg:bg-white lg:h-[100vh]">
+    <div className="lg:mx-40 md:mx-10 lg:mt-[-15px]">
+      <div className="lg:bg-white lg:h-full">
         <div className="p-8">
           {/* Afficher  */}
           <div className="hidden lg:flex lg:flex-row justify-evenly items-center gap-2 text-black font-extrabold">

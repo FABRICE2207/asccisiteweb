@@ -7,9 +7,16 @@
   --colorOrange: #E64E1B;
   --colorOrangeCiel: #F08F00;
 }
-
+/* image arrière plan accueil */
 .bg-hero {
-  background-image: url('../app/assets/image_background.jpg');
+  background-image: url('../app/assets/image_background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* image arrière plan Organisation-Ascci */
+.bg-orga-assci {
+  background-image: url('../app/assets/orga_ascci.png');
   background-size: cover;
   background-position: center;
 }
@@ -52,8 +59,6 @@
 @font-face {
   font-family: 'MontserratRegular';
   src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-display: swap; /* Améliore les performances */
 }
 
 @font-face {

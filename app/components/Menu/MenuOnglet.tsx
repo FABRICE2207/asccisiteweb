@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import logoascci from "../../assets/logo_ascci.png";
-import Image from "next/image";
 import Link from "next/link";
 
-const Menu = () => {
+const MenuOnglet = () => {
   const [activeHash, setActiveHash] = useState<string | null>(null);
   const [visiblePopup, setVisiblePopup] = useState<number | null>(null);
 
@@ -13,19 +11,19 @@ const Menu = () => {
       id: 1,
       name: "Qui sommes-nous ?",
       link: "/qui-sommes-nous",
-      icon: "../../assets/logo_sommes_nous.png",
+      icon: "../../assetst/logo_ascci.png",
     },
     {
       id: 2,
       name: "Que faisons-nous ?",
       link: "/que-faisons-nous",
-      icon: "../../assets/logo_ascci.png",
+      icon: "../../assetst/logo_ascci.png",
     },
     {
       id: 3,
       name: "Où nous trouvez ?",
       link: "/ou-nous-trouvez",
-      icon: "../../assets/logo_ascci.png",
+      icon: "../../assetst/logo_ascci.png",
     },
   ];
 
@@ -611,74 +609,34 @@ const isOrganisation = () =>
 
   return (
     <>
-      <div
-        className="w-full flex flex-col lg:justify-start lg:items-start lg:text-start lg:py-[40px] lg:gap-3 md:flex-row
-    md:w-full md:flex md:justify-center md:items-center md:text-center md:gap-[5px]
-    sm:flex sm:justify-center sm:items-center sm:text-center sm:flex-col justify-center items-center
-    "
-      >
-        <div
-          className="flex justify-center items-start"
-          data-aos="zoom-in-down"
-          data-aos-delay="300"
-        >
-          <Image
-            src={logoascci}
-            width={180}
-            height={180}
-            alt="Logo de l'ASCCI"
-            className="py-15"
-          />
-        </div>
-
+      <div>
         {/* Texte principale */}
-        <div className="text-white text-prin">
+        <div className="text-white p-10 flex justify-center items-center">
           <h1
-            className="text-6xl titre-prin"
+            className="text-5xl text-center"
             data-aos="fade-up"
             data-aos-delay="600"
             style={{ fontFamily: "ChunkFiveEx" }}
           >
-            AGIR <br /> POUR UNE <br /> GÉNÉRATION <br /> INNOVANTE <br /> ET
-            RÉSILIENTE
+            Organisation ASCCI
           </h1>
 
-          <div
-            className="lg:justify-start my-5 lg:items-start lg:text-start sm:flex 
-        sm:justify-center sm:items-center sm:text-center"
-            data-aos="fade-up"
-            data-aos-delay="800"
-          >
-            {/* Bouton direction sur le site d'adhésion */}
-            <Link
-              href="https://adhesion.scoutascci.org/"
-              target="_blank"
-              className="bg-gradient-to-l from-orange-500 to-orange-700 w-[200px] h-[50px] rounded-2xl flex justify-center 
-            items-center sm:flex sm:justify-center sm:items-center sm:text-center
-            md:flex md:justify-center md:items-center md:text-center
-            "
-              style={{ fontFamily: "MontserratRegular" }}
-            >
-              Inscrivez-vous
-            </Link>
-          </div>
         </div>
       </div>
 
       {/* Les trois liens en bas */}
-      <div className="w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block">
+      <div className="w-[15%] border-r-2 border-white  mt-[10px] hidden lg:block">
         <ul className="lg:flex lg:flex-col">
-          {menuBas.map(({ id, name, icon }) => (
+          {menuBas.map(({ id, name }) => (
             <div key={id} className="flex items-center gap-1">
-              
               <Link
                 className="text-white cursor-pointer p-1 hover:border-orange-600
                 hover:border-b-4 focus:border-orange-600 focus:border-b-4"
                 style={{ fontFamily: "MontserratRegular" }}
                 href=""
                 onClick={() => togglePopup(id)}
-              > 
-               {name}
+              >
+                {name}
               </Link>
 
               {/* Popup unique pour chaque lien l'id est égale 1 */}
@@ -920,7 +878,7 @@ const isOrganisation = () =>
                               }`}
                               onClick={(e) => {
                                 e.preventDefault();
-                                window.location.href = "/Jeunes#Protection-des-jeunes";
+                                window.location.href = "/Jeunes#Protection-jeunes";
                                 setActiveHash("Protection-des-jeunes");
                               }}
                             >Protection des jeunes</Link>
@@ -1182,4 +1140,4 @@ const isOrganisation = () =>
   );
 };
 
-export default Menu;
+export default MenuOnglet;

@@ -11,9 +11,12 @@ const Event = () => {
 
           <div className='flex lg:flex-row lg:px-32 md:w-full flex-col justify-between items-center 
             py-10 gap-5 p-8'>
-    
+            {/* Image 1 */}
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            '>
+            '
+            data-aos="fade-up"
+            data-aos-delay="600"
+            >
               {/* Animation :  data-aos="fade-up" data-aos-delay="700" */}
               <div className=''>
                 <Image
@@ -27,7 +30,7 @@ const Event = () => {
               <div>
                 <div className='p-8 text-white'>
                   <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
-                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <p >Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>
@@ -36,8 +39,12 @@ const Event = () => {
              
             </div>
 
+            {/* Image 2 */}
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            '>
+            '
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            >
               <div className=''>
                 <Image
                   src={imagefille}
@@ -50,7 +57,7 @@ const Event = () => {
               <div>
                 <div className='p-8 text-white'>
                   <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
-                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <p >Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>
@@ -59,8 +66,11 @@ const Event = () => {
              
             </div>
             
+            {/* Image 3 */}
             <div className='flex flex-col mt-12 w-full bg-gradient-to-l from-orange-500 to-orange-700
-            '>
+            ' data-aos="fade-up"
+              data-aos-delay="1200"
+            >
               <div className=''>
                 <Image
                   src={imagefille}
@@ -73,7 +83,7 @@ const Event = () => {
               <div>
                 <div className='p-8 text-white'>
                   <h1 className='text-center' style={{ fontFamily: 'ChunkFiveEx' }}>CAMP DE REGION</h1>
-                  <p style={{ fontFamily: 'MontserratRegular' }}>Lorem ipsum dolor sit, amet consectetur adipisicing 
+                  <p >Lorem ipsum dolor sit, amet consectetur adipisicing 
                     elit. Sit cumque excepturi beatae at dicta est fuga 
                     perferendis provident quidem amet quam ex ad quas odio, 
                     </p>

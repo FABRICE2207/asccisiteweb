@@ -128,7 +128,7 @@ const Header = () => {
       link: "/",
     },
     {
-      id: 1,
+      id: 2,
       name: "Actu",
       link: "/Actualite",
     },
@@ -152,17 +152,17 @@ const Header = () => {
 
   return (
     <nav
-      className="w-full flex bg-[#000080] justify-between items-center gap-1 lg:px-16
+      className="w-full flex bg-[#000080] justify-center items-center gap-1 lg:px-16
       px-6 py-4 sticky top-0 z-1"
     >
-      <div className="w-[80%]">
+      <div className="w-full">
         {/* Liste des menus header */}
-        <ul className="lg:flex justify-end items-end gap-18 hidden">
+        <ul className="lg:flex justify-center items-center gap-18 hidden">
           {menuNav.map(({ name, link}) => (
             <Link
               key={link}
-              className="text-white cursor-pointer p-1 
-                hover:border-[#090674] text-[15px]"
+              className="text-white hover:bg-gradient-to-l hover:from-orange-500 hover:to-orange-700 px-5 hover:rounded-2xl cursor-pointer p-1 
+                 text-[15px]"
                 style={{ fontFamily: 'Montserrat', fontWeight: 600 }}
               // className=""
               href={link}
@@ -188,11 +188,11 @@ const Header = () => {
 </div>
 
       {/* Recherche */}
-      <div>
+      {/* <div>
         <div className="bg-gray-200 px-10 rounded-full">
           <h3>Recherche</h3>
         </div>
-      </div>
+      </div> */}
 
       {/* affiche du menu format telephone */}
       <div className={`${isMenuOpen ? "flex" : "hidden"}`}>
