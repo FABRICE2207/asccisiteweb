@@ -668,7 +668,7 @@ const isOrganisation = () =>
       {/* Les trois liens en bas */}
       <div className="w-[15%] border-r-2 border-white  mt-[-50px] hidden lg:block">
         <ul className="lg:flex lg:flex-col">
-          {menuBas.map(({ id, name, icon }) => (
+          {menuBas.map(({ id, name }) => (
             <div key={id} className="flex items-center gap-1">
               
               <Link
